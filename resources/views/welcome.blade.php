@@ -69,5 +69,7 @@
                 </h1>
             </div>
         </div>
+
+        @include('githubRibbon')
     </body>
 </html>
