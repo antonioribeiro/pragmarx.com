@@ -52,7 +52,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">PragmaRX</div>
-                <h2>Home of Awesome Laravel Packages</h2>
+                <h2>Home of Awesome PHP and Laravel Packages</h2>
 
                 <h4>
                     <p><a href="https://github.com/antonioribeiro/google2fa">Laravel Google Two Factor Authentication</a></p>
@@ -67,6 +67,10 @@
                     <a href="https://github.com/antonioribeiro"> <i class="fa fa-github-alt" title="Github"></i></a>
                     <a href="https://twitter.com/iantonioribeiro"> <i class="fa fa-twitter" title="Twitter"></i></a>
                 </h1>
+
+                <h4>
+                    by <a href="https://antoniocarlosribeiro.com">Antonio Carlos Ribeiro</a>
+                </h4>
             </div>
         </div>
 
