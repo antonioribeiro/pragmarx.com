@@ -7,6 +7,17 @@ use Youtube as YoutubeService;
 class YouTube
 {
     public function listChannel($usuario) {
-        return YoutubeService::getChannelByName($usuario);
+        $channel = YoutubeService::getChannelByName($usuario);
+
+        $playlists = YoutubeService::getPlaylistsByChannelId($channel->id);
+
+        $videos = [];
+
+        foreach($playlists as $playlist)
+        {
+            $videos[$playlist->snippet->title] = YoutubeService::getPlaylistItemsByPlaylistId($playlist->id);
+        }
+
+        return $videos;
     }
 }
