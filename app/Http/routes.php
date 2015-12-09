@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('api/v1.0/forum/videos', 'Api@forumVideos');
