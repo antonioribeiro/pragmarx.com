@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('api/v1.0/forum/videos', 'Api@forumVideos');
+
+Route::get('/imageload/{imageCount?}', function ($imageCount = 5) {
+    return view('imageload')->with('imageCount', $imageCount);
+});
+
