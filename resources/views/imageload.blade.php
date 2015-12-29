@@ -13,17 +13,20 @@
             {
                 jQuery("#imagesmessage").show('slow', function()
                 {
+                    jQuery(".content").show('slow');
                     jQuery("#images").hide('slow');
                 });
             })
         </script>
-    </head>
 
-    <body>
         <style>
             body {
                 text-align: center;
                 font-family: arial;
+            }
+
+            .content {
+                display: none;
             }
 
             img {
@@ -45,21 +48,27 @@
                 color: #005d00;
             }
         </style>
+    </head>
 
-        <div id="#images">
-            @foreach(range(1,$imageCount) as $number)
-                <img src="http://lorempixel.com/1920/1080/?{{ $number }}">
-            @endforeach
+    <body>
+        <div class="content">
+            <div id="#images">
+                @foreach(range(1,$imageCount) as $number)
+                    <img src="http://lorempixel.com/1920/1080/?{{ $number }}">
+                @endforeach
+            </div>
         </div>
 
-        <div id="htmlmessage" hidden>
-            <h2>HTML, Javascript e CSS carregados.</h2>
+        <div class="footer">
+            <div id="htmlmessage" hidden>
+                <h2>HTML, Javascript e CSS carregados.</h2>
 
-            <h4>Aguarde, carregando as imagens...</h4>
-        </div>
+                <h4>Aguarde, carregando as imagens...</h4>
+            </div>
 
-        <div id="imagesmessage" hidden>
-            <h1>Imagens 100% carregadas.</h1>
+            <div id="imagesmessage" hidden>
+                <h1>Imagens 100% carregadas.</h1>
+            </div>
         </div>
     </body>
 </html>
