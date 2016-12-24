@@ -871,16 +871,16 @@
         },
         {
             "name": "pragmarx/firewall",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/firewall.git",
-                "reference": "0d19bc330388595ee766bc7c3e49573a0c09e2e2"
+                "reference": "b3060e1b4b299aa97a57dc10333de298cc253115"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/0d19bc330388595ee766bc7c3e49573a0c09e2e2",
-                "reference": "0d19bc330388595ee766bc7c3e49573a0c09e2e2",
+                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/b3060e1b4b299aa97a57dc10333de298cc253115",
+                "reference": "b3060e1b4b299aa97a57dc10333de298cc253115",
                 "shasum": ""
             },
             "require": {
@@ -923,7 +923,7 @@
                 "laravel",
                 "whitelist"
             ],
-            "time": "2016-05-14T19:08:58+00:00"
+            "time": "2016-12-24T22:07:47+00:00"
         },
         {
             "name": "pragmarx/support",
