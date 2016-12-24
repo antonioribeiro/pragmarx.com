@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
 
-        //
+        PragmaRX\Firewall\Vendor\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,6 +225,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Firewall' => PragmaRX\Firewall\Vendor\Laravel\Facade::class,
 
     ],
 
