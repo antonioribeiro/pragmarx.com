@@ -168,6 +168,7 @@ return [
          */
 
         PragmaRX\Firewall\Vendor\Laravel\ServiceProvider::class,
+        PrettyRoutes\ServiceProvider::class,
 
         /*
          * Application Service Providers...
