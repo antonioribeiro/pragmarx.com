@@ -871,16 +871,16 @@
         },
         {
             "name": "pragmarx/firewall",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/firewall.git",
-                "reference": "b3060e1b4b299aa97a57dc10333de298cc253115"
+                "reference": "334b66843d08c1db1df5871bbaca973c2b88497e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/b3060e1b4b299aa97a57dc10333de298cc253115",
-                "reference": "b3060e1b4b299aa97a57dc10333de298cc253115",
+                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/334b66843d08c1db1df5871bbaca973c2b88497e",
+                "reference": "334b66843d08c1db1df5871bbaca973c2b88497e",
                 "shasum": ""
             },
             "require": {
@@ -923,20 +923,20 @@
                 "laravel",
                 "whitelist"
             ],
-            "time": "2016-12-24T22:07:47+00:00"
+            "time": "2016-12-24T23:17:43+00:00"
         },
         {
             "name": "pragmarx/support",
-            "version": "v0.6.11",
+            "version": "v0.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/support.git",
-                "reference": "d47c5346073bc98cfea28605d243969f3066daab"
+                "reference": "aa848b533edee7ad37e728d7df67e07af58342f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/d47c5346073bc98cfea28605d243969f3066daab",
-                "reference": "d47c5346073bc98cfea28605d243969f3066daab",
+                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/aa848b533edee7ad37e728d7df67e07af58342f8",
+                "reference": "aa848b533edee7ad37e728d7df67e07af58342f8",
                 "shasum": ""
             },
             "require": {
@@ -977,7 +977,7 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2016-11-24T03:51:19+00:00"
+            "time": "2016-12-24T23:42:05+00:00"
         },
         {
             "name": "psr/log",
