@@ -31,7 +31,7 @@
     </div>
 
 
-    <h2>Links</h2>
+    <h2>Firewall testing links</h2>
     <h4>
         <p><a href="/firewall/blocked">Blacklist Protected: you only have access to this route if your IP is NOT BLACKLISTED.</a></p>
         <p><a href="/firewall/whitelisted">Whitelist Enforced: you only have access to this route if your IP IS WHITELISTED.</a></p>
