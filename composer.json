@@ -6,17 +6,23 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "garygreen/pretty-routes": "^0.0.5",
-        "geoip/geoip": "^1.17",
-        "laravel/framework": "5.3.*",
-        "pragmarx/firewall": "^1.0"
+        "docusign/esign-client": "^2.0",
+        "garygreen/pretty-routes": "^0.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "laravel/framework": "dev-master",
+        "laravel/tinker": "~1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "pragmarx/countries": "dev-master",
+        "pragmarx/firewall": "dev-master",
+        "pragmarx/google2fa": "dev-master",
+        "pragmarx/health": "dev-master",
+        "pragmarx/tracker": "dev-master",
+        "predis/predis": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.0",
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
         "classmap": [
@@ -27,9 +33,9 @@
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "scripts": {
         "post-root-package-install": [
@@ -49,6 +55,8 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
-    }
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev"
 }

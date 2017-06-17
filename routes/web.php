@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 require base_path('routes/firewall.php');
+require base_path('routes/google2fa.php');
 
