@@ -1981,7 +1981,6 @@ if (document.getElementById(appId)) {
             },
 
             __passwordIsValid: function __passwordIsValid(element) {
-                console.log(element);
                 return element.isValid == true;
             },
             __anyPasswordIsValid: function __anyPasswordIsValid() {

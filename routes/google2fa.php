@@ -1,6 +1,6 @@
 <?php
 
-use Base32\Base32;
+use ParagonIE\ConstantTime\Base32;
 
 Route::group(['prefix' => '/google2fa'], function () {
     Route::get('/', function () {
@@ -34,7 +34,7 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
     Route::get('/secret-key-prefix', function () {
         return [
             'secretKeyPrefix' => $prefix = str_random(20),
-            'secretKeyPrefixB32' => Base32::encode($prefix),
+            'secretKeyPrefixB32' => Base32::encodeUpper($prefix),
         ];
     });
 

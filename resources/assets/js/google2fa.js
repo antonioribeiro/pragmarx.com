@@ -76,7 +76,6 @@ if (document.getElementById(appId)) {
             },
 
             __passwordIsValid(element) {
-                console.log(element);
                 return element.isValid == true;
             },
 
