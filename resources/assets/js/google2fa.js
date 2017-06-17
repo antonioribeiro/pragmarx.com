@@ -42,7 +42,13 @@ if (document.getElementById(appId)) {
 
                 axios
                     .get(Laravel.apiPrefix+'/google2fa/secret-key/'+this.secretKeyPrefix)
-                    .then(response => this.secretKey = response.data.secretKey)
+                    .then(response => {
+                        if (response.data.message) {
+                            return this.error = response.data.message;
+                        }
+
+                        this.secretKey = response.data.secretKey;
+                    })
                     .catch(error => this.error = error.response.data.message)
                 ;
             },

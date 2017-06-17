@@ -24,7 +24,11 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
             $power++;
         }
 
-        return ['secretKey' => Google2FA::generateSecretKey(pow(2, $power), $prefix)];
+        try {
+            return ['secretKey' => Google2FA::generateSecretKey(pow(2, $power), $prefix)];
+        } catch (\Exception $exception) {
+            return ['message' => $exception->getMessage()];
+        }
     });
 
     Route::get('/secret-key-prefix', function () {
