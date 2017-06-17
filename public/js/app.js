@@ -1920,7 +1920,7 @@ if (document.getElementById(appId)) {
             secretKeyPrefixB32: '',
             qrCodeUrl: '',
             password: '',
-            passwordList: [{ isValid: true, password: "635538", timestamp: 49921556 }],
+            passwordList: [],
             window: 4,
             currentTimestamp: 0,
             error: '',
