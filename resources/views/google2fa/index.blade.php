@@ -28,7 +28,7 @@
             </div>
         </form>
 
-        <br><br><br><br>
+        <br><br>
         <p>{{ ($user = Auth::user())->name }} ({{ $user->company }})</p>
         <p>{{ $user->email }}</p>
         <p>{{ $user->google2fa_secret }}</p>
