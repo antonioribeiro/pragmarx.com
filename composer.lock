@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2be253c7ef70737450129ae168999913",
+    "content-hash": "76dd8c26e2f0edcaa279540b0b76ab34",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -1896,12 +1896,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa.git",
-                "reference": "7f37e8187acb460b59a998071560e2a40955820e"
+                "reference": "536d724011efd982715bae8fec09d12d8a82c322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/7f37e8187acb460b59a998071560e2a40955820e",
-                "reference": "7f37e8187acb460b59a998071560e2a40955820e",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/536d724011efd982715bae8fec09d12d8a82c322",
+                "reference": "536d724011efd982715bae8fec09d12d8a82c322",
                 "shasum": ""
             },
             "require": {
@@ -1919,11 +1919,8 @@
             "type": "library",
             "extra": {
                 "component": "package",
-                "frameworks": [
-                    "Laravel"
-                ],
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -1944,12 +1941,84 @@
             ],
             "description": "A One Time Password Authentication package, compatible with Google Authenticator.",
             "keywords": [
+                "2fa",
                 "Authentication",
                 "Two Factor Authentication",
                 "google2fa",
                 "laravel"
             ],
-            "time": "2017-06-17 04:45:38"
+            "time": "2017-06-17 15:02:33"
+        },
+        {
+            "name": "pragmarx/google2fa-laravel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/google2fa-laravel.git",
+                "reference": "629c0bf41f3e650a929d4714813e459106e25cc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa-laravel/zipball/629c0bf41f3e650a929d4714813e459106e25cc4",
+                "reference": "629c0bf41f3e650a929d4714813e459106e25cc4",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5",
+                "php": ">=5.4",
+                "pragmarx/google2fa": "~2.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.1"
+            },
+            "suggest": {
+                "bacon/bacon-qr-code": "Required to generate inline QR Codes."
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "frameworks": [
+                    "Laravel"
+                ],
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\Google2FALaravel\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Google2FA": "PragmaRX\\Google2FALaravel\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\Google2FALaravel\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Carlos Ribeiro",
+                    "email": "acr@antoniocarlosribeiro.com",
+                    "role": "Creator & Designer"
+                }
+            ],
+            "description": "A One Time Password Authentication package, compatible with Google Authenticator.",
+            "keywords": [
+                "authentication",
+                "google2fa",
+                "laravel",
+                "two factor authentication"
+            ],
+            "support": {
+                "source": "https://github.com/antonioribeiro/google2fa-laravel/tree/master",
+                "issues": "https://github.com/antonioribeiro/google2fa-laravel/issues"
+            },
+            "time": "2017-06-17 15:06:15"
         },
         {
             "name": "pragmarx/health",
@@ -5126,7 +5195,7 @@
         "laravel/framework": 20,
         "pragmarx/countries": 20,
         "pragmarx/firewall": 20,
-        "pragmarx/google2fa": 20,
+        "pragmarx/google2fa-laravel": 20,
         "pragmarx/health": 20,
         "pragmarx/tracker": 20
     },

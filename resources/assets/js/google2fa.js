@@ -2,7 +2,6 @@
  * Google2FA App
  */
 
-
 var appId = 'vue-google2fa';
 
 if (document.getElementById(appId)) {

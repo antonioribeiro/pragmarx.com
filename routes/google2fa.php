@@ -1,11 +1,28 @@
 <?php
 
 use ParagonIE\ConstantTime\Base32;
+use PragmaRX\Google2FALaravel\Authenticator;
 
-Route::group(['prefix' => '/google2fa'], function () {
+Route::group(['prefix' => '/google2fa', 'middleware' => 'autologin'], function () {
     Route::get('/', function () {
-        return view('google2fa.index')->with('random_email', Faker\Factory::create()->email);
+        return view('google2fa.playground');
     });
+
+    Route::get('/middleware', function () {
+        return view('google2fa.passed');
+    })->middleware('2fa');
+
+    Route::get('/middleware/logout', function () {
+        (new Authenticator(request()))->logout();
+
+        session()->forget('currentUser');
+
+        return redirect()->to('/google2fa/middleware');
+    });
+
+    Route::post('/middleware/authenticate', function () {
+        return redirect()->to('/google2fa/middleware');
+    })->middleware('2fa');
 });
 
 Route::group(['prefix' => '/api/v1/google2fa'], function () {
@@ -66,10 +83,6 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
                 );
             }
 
-            $validString = $valid === false ? 'false' : ($valid === true ? 'true' : $valid);
-
-            info([$password . ' - valid: ' . $validString . ' - saved timestamp: ' . $timestamp . ' - current timestamp: '. Google2FA::getTimestamp()]);
-
             return $valid;
         }
 
@@ -90,8 +103,6 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
         {
             return collect($passwordList)->max('timestamp');
         }
-
-        info('--- passwordIsInList ----------------------------------------');
 
         try {
             $password = request()->get('password');

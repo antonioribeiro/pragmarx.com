@@ -30,14 +30,27 @@
     <body>
         <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
             <a class="navbar-brand" href="/">PragmaRX</a>
+
             <ul class="nav navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item {{ request()->is('firewall') ? 'active' : '' }}">
                     <a class="nav-link" href="/firewall">Firewall Test Page</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item {{ request()->is('google2fa') ? 'active' : '' }}">
                     <a class="nav-link" href="/google2fa">Google2FA Test Page</a>
                 </li>
             </ul>
+
+            @if ($user = Auth::user())
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <span class="nav-text">
+                            <a href="/google2fa/middleware/logout">
+                                {{ $user->name }} ({{ $user->email }}) - logout
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            @endif
         </nav>
 
         <div class="container">

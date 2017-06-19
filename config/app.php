@@ -170,7 +170,7 @@ return [
         PragmaRX\Firewall\Vendor\Laravel\ServiceProvider::class,
         PragmaRX\Health\ServiceProvider::class,
         PrettyRoutes\ServiceProvider::class,
-        PragmaRX\Google2FA\Vendor\Laravel\ServiceProvider::class,
+        // PragmaRX\Google2FA\Vendor\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Firewall' => PragmaRX\Firewall\Vendor\Laravel\Facade::class,
-        'Google2FA' => PragmaRX\Google2FA\Vendor\Laravel\Facade::class,
+        // 'Google2FA' => PragmaRX\Google2FA\Vendor\Laravel\Facade::class,
     ],
 
 ];
