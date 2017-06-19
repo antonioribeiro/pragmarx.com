@@ -33,9 +33,5 @@
         <p>{{ $user->email }}</p>
         <p>{{ $user->google2fa_secret }}</p>
         <p><img src="{{ $user->qrcode_url }}" alt=""></p>
-
-        <pre>
-            {{ var_dump(session()->all()) }}
-        </pre>
     </div>
 @stop

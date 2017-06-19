@@ -65,6 +65,10 @@
                     </div>
 
                     @include('githubRibbon')
+
+                    <pre>
+                        {{ d(session()->all()) }}
+                    </pre>
                 </body>
             </div>
         </div><!-- /.container -->

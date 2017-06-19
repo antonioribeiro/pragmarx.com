@@ -8,6 +8,6 @@
 
         <br><br><br><br>
 
-        <a href="/google2fa/middleware/logout" class="btn btn-primary" target="_blank">Logout</a>
+        <a href="/google2fa/middleware/logout" class="btn btn-primary">Logout</a>
     </div>
 @stop
