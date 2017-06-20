@@ -1,7 +1,7 @@
 <?php
 
 use ParagonIE\ConstantTime\Base32;
-use PragmaRX\Google2FALaravel\Authenticator;
+use PragmaRX\Google2FALaravel\Facade as Google2FA;
 
 Route::group(['prefix' => '/google2fa', 'middleware' => 'autologin'], function () {
     Route::get('/', function () {
@@ -13,7 +13,7 @@ Route::group(['prefix' => '/google2fa', 'middleware' => 'autologin'], function (
     })->middleware('2fa');
 
     Route::get('/middleware/logout', function () {
-        (new Authenticator(request()))->logout();
+        Google2FA::logout();
 
         session()->forget('currentUser');
 
@@ -66,9 +66,9 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
     });
 
     Route::post('/check-password', function () {
-        function verifyPassword($password = null, $timestamp = true)
+        function verifyPassword($password = null, $timestamp = null)
         {
-            if ($timestamp === true) {
+            if (is_null($timestamp)) {
                 $valid = Google2FA::verifyKey(
                     request()->get('secretKey'),
                     $password ?: request()->get('password'),
