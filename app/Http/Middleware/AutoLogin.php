@@ -39,6 +39,7 @@ class AutoLogin extends BaseVerifier
 
         $this->auth->login($user);
 
+
         return $next($request);
     }
 }
