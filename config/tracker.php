@@ -5,7 +5,7 @@ return [
     /*
      * Enable it?
      */
-    'enabled' => true,
+    'enabled' => env('TRACKER_ENABLED', false),
 
     /*
      * Enable cache?
@@ -338,4 +338,5 @@ return [
      * Stats Panel controllers namespace
      */
     'stats_controllers_namespace' => 'PragmaRX\Tracker\Vendor\Laravel\Controllers',
+
 ];
