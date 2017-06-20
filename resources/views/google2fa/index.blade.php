@@ -3,6 +3,7 @@
 @section('content')
     <div id="vue-google2fa">
         <h1><a href="https://github.com/antonioribeiro/google2fa">One Time Password</a></h1>
+        <h4>Middleware Demo</h4>
 
         <p class="large">Please open Google Authenticator and type a password below</p>
 
