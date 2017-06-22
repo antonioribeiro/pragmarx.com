@@ -24,15 +24,15 @@ class AutoLogin extends BaseVerifier
         if (is_null($user = session()->get('currentUser'))) {
             $user = new \App\Data\Entities\User();
 
-            $user->name = faker()->name;
+            $user->name = env('AUTOLOGIN_NAME', faker()->name);
 
-            $user->email = faker()->email;
+            $user->email = env('AUTOLOGIN_EMAIL', faker()->email);
 
-            $user->company = faker()->company;
+            $user->company = env('AUTOLOGIN_COMPANY', faker()->company);
 
-            $user->google2fa_secret = Google2FA::generateSecretKey(32);
+            $user->google2fa_secret = env('AUTOLOGIN_SECRET', Google2FA::generateSecretKey(32));
 
-            $user->qrcode_url = Google2FA::getQRCodeGoogleUrl($user->company, $user->email, $user->google2fa_secret);
+            $user->qrcode_url = env('AUTOLOGIN_QRCODE_URL', Google2FA::getQRCodeGoogleUrl($user->company, $user->email, $user->google2fa_secret));
 
             session()->put('currentUser', $user);
         }

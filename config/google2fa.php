@@ -13,7 +13,7 @@ return [
      * In case you need your users to be asked for a new one time passwords from time to time.
      */
 
-    'lifetime' => 0, // 0 = eternal
+    'lifetime' => 1, // 0 = eternal
 
     /**
      * Renew lifetime at every new request.

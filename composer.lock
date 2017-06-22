@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "32223117026df287636f5c40d4a729c7",
     "content-hash": "eef3c43aeba3cc1aa5cc8c8d3752b334",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.29.9",
+            "version": "3.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fdb015e0905fccf25b35a78e6fda02673df97dc8"
+                "reference": "c84ce7a758ce3bbe8ff54abfa2e0646941fe5fc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fdb015e0905fccf25b35a78e6fda02673df97dc8",
-                "reference": "fdb015e0905fccf25b35a78e6fda02673df97dc8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c84ce7a758ce3bbe8ff54abfa2e0646941fe5fc4",
+                "reference": "c84ce7a758ce3bbe8ff54abfa2e0646941fe5fc4",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-06-20T20:54:58+00:00"
+            "time": "2017-06-21 21:38:23"
         },
         {
             "name": "commercie/currency",
@@ -129,7 +130,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2016-07-01T11:01:46+00:00"
+            "time": "2016-07-01 11:01:46"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -162,7 +163,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24T07:27:01+00:00"
+            "time": "2014-10-24 07:27:01"
         },
         {
             "name": "doctrine/annotations",
@@ -371,7 +372,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03T10:49:41+00:00"
+            "time": "2017-01-03 10:49:41"
         },
         {
             "name": "doctrine/common",
@@ -638,7 +639,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "docusign/esign-client",
@@ -689,7 +690,7 @@
                 "sdk",
                 "swagger"
             ],
-            "time": "2016-02-19T21:58:23+00:00"
+            "time": "2016-02-19 21:58:23"
         },
         {
             "name": "egulias/email-validator",
@@ -746,7 +747,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2017-01-30T22:07:36+00:00"
+            "time": "2017-01-30 22:07:36"
         },
         {
             "name": "erusev/parsedown",
@@ -788,7 +789,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2017-03-29T16:04:15+00:00"
+            "time": "2017-03-29 16:04:15"
         },
         {
             "name": "filp/whoops",
@@ -849,7 +850,7 @@
                 "whoops",
                 "zf2"
             ],
-            "time": "2017-06-03T18:33:07+00:00"
+            "time": "2017-06-03 18:33:07"
         },
         {
             "name": "garygreen/pretty-routes",
@@ -892,7 +893,7 @@
                 }
             ],
             "description": "Pretty routes for Laravel 5.",
-            "time": "2017-06-08T14:58:27+00:00"
+            "time": "2017-06-08 14:58:27"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1116,7 +1117,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08T15:00:19+00:00"
+            "time": "2014-04-08 15:00:19"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1160,7 +1161,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20T18:58:01+00:00"
+            "time": "2015-04-20 18:58:01"
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -1208,7 +1209,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2017-06-19T21:29:50+00:00"
+            "time": "2017-06-19 21:29:50"
         },
         {
             "name": "jenssegers/agent",
@@ -1267,7 +1268,7 @@
                 "user agent",
                 "useragent"
             ],
-            "time": "2017-03-12T09:58:22+00:00"
+            "time": "2017-03-12 09:58:22"
         },
         {
             "name": "laravel/framework",
@@ -1635,7 +1636,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2016-09-01T09:41:00+00:00"
+            "time": "2016-09-01 09:41:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -1687,7 +1688,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2017-03-29T13:59:30+00:00"
+            "time": "2017-03-29 13:59:30"
         },
         {
             "name": "monolog/monolog",
@@ -1809,7 +1810,7 @@
                 "cron",
                 "schedule"
             ],
-            "time": "2017-01-23T04:29:33+00:00"
+            "time": "2017-01-23 04:29:33"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -1864,7 +1865,7 @@
                 "json",
                 "jsonpath"
             ],
-            "time": "2016-12-03T22:08:25+00:00"
+            "time": "2016-12-03 22:08:25"
         },
         {
             "name": "nesbot/carbon",
@@ -2030,7 +2031,7 @@
                 "hex2bin",
                 "rfc4648"
             ],
-            "time": "2016-06-13T01:00:24+00:00"
+            "time": "2016-06-13 01:00:24"
         },
         {
             "name": "paragonie/random_compat",
@@ -2078,7 +2079,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-03-13T16:27:32+00:00"
+            "time": "2017-03-13 16:27:32"
         },
         {
             "name": "pragmarx/countries",
@@ -2086,12 +2087,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/countries.git",
-                "reference": "de054a6e96ff410d206e1f2d2159113e5b53e4a8"
+                "reference": "b2471176f2ea59ad9e6dd5f75b79623aa7e3d1d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/countries/zipball/de054a6e96ff410d206e1f2d2159113e5b53e4a8",
-                "reference": "de054a6e96ff410d206e1f2d2159113e5b53e4a8",
+                "url": "https://api.github.com/repos/antonioribeiro/countries/zipball/b2471176f2ea59ad9e6dd5f75b79623aa7e3d1d6",
+                "reference": "b2471176f2ea59ad9e6dd5f75b79623aa7e3d1d6",
                 "shasum": ""
             },
             "require": {
@@ -2106,6 +2107,16 @@
                 "phpunit/phpunit": "~6.0"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\Countries\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Countries": "PragmaRX\\Countries\\Facade"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PragmaRX\\Countries\\": "src/"
@@ -2132,7 +2143,7 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2017-03-23 04:17:11"
+            "time": "2017-06-21 16:25:16"
         },
         {
             "name": "pragmarx/datatables",
@@ -2187,7 +2198,7 @@
                 "laravel",
                 "laravel4"
             ],
-            "time": "2017-01-31T03:05:08+00:00"
+            "time": "2017-01-31 03:05:08"
         },
         {
             "name": "pragmarx/firewall",
@@ -2251,12 +2262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa.git",
-                "reference": "8c7b47a29928e516301e5d4fc147db9a34eb3361"
+                "reference": "f1d41552e90f30411d8ac643d4609adecf5cfab9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/8c7b47a29928e516301e5d4fc147db9a34eb3361",
-                "reference": "8c7b47a29928e516301e5d4fc147db9a34eb3361",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa/zipball/f1d41552e90f30411d8ac643d4609adecf5cfab9",
+                "reference": "f1d41552e90f30411d8ac643d4609adecf5cfab9",
                 "shasum": ""
             },
             "require": {
@@ -2302,7 +2313,7 @@
                 "google2fa",
                 "laravel"
             ],
-            "time": "2017-06-20 21:37:46"
+            "time": "2017-06-22 14:30:09"
         },
         {
             "name": "pragmarx/google2fa-laravel",
@@ -2310,12 +2321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa-laravel.git",
-                "reference": "43ead143cc7b72f7b322c780a85a71fa3df9b670"
+                "reference": "8a3fe61727f9f06490b6924ac5b7f38828bb205b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa-laravel/zipball/43ead143cc7b72f7b322c780a85a71fa3df9b670",
-                "reference": "43ead143cc7b72f7b322c780a85a71fa3df9b670",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa-laravel/zipball/8a3fe61727f9f06490b6924ac5b7f38828bb205b",
+                "reference": "8a3fe61727f9f06490b6924ac5b7f38828bb205b",
                 "shasum": ""
             },
             "require": {
@@ -2375,7 +2386,7 @@
                 "source": "https://github.com/antonioribeiro/google2fa-laravel/tree/master",
                 "issues": "https://github.com/antonioribeiro/google2fa-laravel/issues"
             },
-            "time": "2017-06-20 21:51:19"
+            "time": "2017-06-22 15:15:20"
         },
         {
             "name": "pragmarx/health",
@@ -2383,12 +2394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/health.git",
-                "reference": "f0d69882f9e404f29fe745f3bdc41b43c4846a2b"
+                "reference": "8b9ef69d92ad3f7057ab5df3b61547911e1a2a94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/f0d69882f9e404f29fe745f3bdc41b43c4846a2b",
-                "reference": "f0d69882f9e404f29fe745f3bdc41b43c4846a2b",
+                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/8b9ef69d92ad3f7057ab5df3b61547911e1a2a94",
+                "reference": "8b9ef69d92ad3f7057ab5df3b61547911e1a2a94",
                 "shasum": ""
             },
             "require": {
@@ -2411,6 +2422,13 @@
                 "predis/predis": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\Health\\ServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "files": [
                     "src/Support/Throwable.php",
@@ -2444,7 +2462,7 @@
                 "pragmarx",
                 "server"
             ],
-            "time": "2017-04-21 02:48:40"
+            "time": "2017-06-21 16:23:41"
         },
         {
             "name": "pragmarx/support",
@@ -2498,7 +2516,7 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2017-02-19T15:56:41+00:00"
+            "time": "2017-02-19 15:56:41"
         },
         {
             "name": "pragmarx/tracker",
@@ -2506,12 +2524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/tracker.git",
-                "reference": "a1cb41228e826e624773145be43463b7e79d71f4"
+                "reference": "d6d1170df294f47cd04f8d7e926fb0411de34adf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/a1cb41228e826e624773145be43463b7e79d71f4",
-                "reference": "a1cb41228e826e624773145be43463b7e79d71f4",
+                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/d6d1170df294f47cd04f8d7e926fb0411de34adf",
+                "reference": "d6d1170df294f47cd04f8d7e926fb0411de34adf",
                 "shasum": ""
             },
             "require": {
@@ -2573,7 +2591,7 @@
                 "user agent",
                 "visitor"
             ],
-            "time": "2017-06-20 22:28:31"
+            "time": "2017-06-21 00:02:55"
         },
         {
             "name": "predis/predis",
@@ -2841,7 +2859,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-20T12:51:31+00:00"
+            "time": "2017-06-20 12:51:31"
         },
         {
             "name": "ramsey/uuid",
@@ -2963,7 +2981,7 @@
                 }
             ],
             "description": "Snowplow Refer(r)er parser for PHP",
-            "time": "2016-01-29T16:43:00+00:00"
+            "time": "2016-01-29 16:43:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2971,12 +2989,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "52f65679265c69df816fc928075ea675a43a589a"
+                "reference": "dfb80aa5db347f67e7a75aa31fad0d07e1f82e91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/52f65679265c69df816fc928075ea675a43a589a",
-                "reference": "52f65679265c69df816fc928075ea675a43a589a",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/dfb80aa5db347f67e7a75aa31fad0d07e1f82e91",
+                "reference": "dfb80aa5db347f67e7a75aa31fad0d07e1f82e91",
                 "shasum": ""
             },
             "require": {
@@ -3018,7 +3036,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-06-15 14:53:38"
+            "time": "2017-06-21 14:23:14"
         },
         {
             "name": "symfony/console",
@@ -3366,12 +3384,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "28209d9e670787ad473ef424ae00ffab442bd51d"
+                "reference": "46552dee236cf4c8de2864e6736503b4320b8e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/28209d9e670787ad473ef424ae00ffab442bd51d",
-                "reference": "28209d9e670787ad473ef424ae00ffab442bd51d",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/46552dee236cf4c8de2864e6736503b4320b8e30",
+                "reference": "46552dee236cf4c8de2864e6736503b4320b8e30",
                 "shasum": ""
             },
             "require": {
@@ -3411,7 +3429,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-16 21:35:59"
+            "time": "2017-06-17 07:49:15"
         },
         {
             "name": "symfony/http-kernel",
@@ -4025,7 +4043,7 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-            "time": "2016-09-20T12:50:39+00:00"
+            "time": "2016-09-20 12:50:39"
         },
         {
             "name": "ua-parser/uap-php",
@@ -4075,7 +4093,7 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2017-02-26T19:11:57+00:00"
+            "time": "2017-02-26 19:11:57"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4389,7 +4407,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-04-12T18:52:22+00:00"
+            "time": "2017-04-12 18:52:22"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4488,7 +4506,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30T07:12:33+00:00"
+            "time": "2016-09-30 07:12:33"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4535,7 +4553,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25T06:54:22+00:00"
+            "time": "2016-11-25 06:54:22"
         },
         {
             "name": "phpspec/prophecy",
@@ -4749,7 +4767,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21T13:50:34+00:00"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",
@@ -4855,12 +4873,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "db3166889854d881265f7d3caa20fa82132305fa"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/db3166889854d881265f7d3caa20fa82132305fa",
-                "reference": "db3166889854d881265f7d3caa20fa82132305fa",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -4929,7 +4947,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-14 16:53:16"
+            "time": "2017-06-21 08:11:54"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5153,23 +5171,23 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "dev-master",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "144fedf9aa8e3f1c52199f3634eb699cb59741d9"
+                "reference": "5795ffe5dc5b02460c3e34222fee8cbe245d8fac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/144fedf9aa8e3f1c52199f3634eb699cb59741d9",
-                "reference": "144fedf9aa8e3f1c52199f3634eb699cb59741d9",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/5795ffe5dc5b02460c3e34222fee8cbe245d8fac",
+                "reference": "5795ffe5dc5b02460c3e34222fee8cbe245d8fac",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.0"
+                "phpunit/phpunit": "^5.0"
             },
             "type": "library",
             "extra": {
@@ -5199,7 +5217,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-03-07 12:59:58"
+            "time": "2016-11-26 07:53:53"
         },
         {
             "name": "sebastian/exporter",
