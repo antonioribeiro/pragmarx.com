@@ -30,7 +30,7 @@ class AutoLogin extends BaseVerifier
 
             $user->company = faker()->company;
 
-            $user->google2fa_secret = Google2FA::generateSecretKey(32);
+            $user->google2fa_secret = env('GOOGLE2FA_TEST_SECRET', Google2FA::generateSecretKey(32));
 
             $user->qrcode_url = Google2FA::getQRCodeGoogleUrl($user->company, $user->email, $user->google2fa_secret);
 

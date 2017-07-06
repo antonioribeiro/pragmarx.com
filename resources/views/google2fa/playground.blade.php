@@ -60,6 +60,13 @@
                         <div class="col-xs-12">
                             <img :src="qrCodeUrl" alt="">
                         </div>
+                        <div class="col-xs-12">
+                            <p></p>
+                            <p>current password</p>
+                            <h4 class="btn-success" style="padding: 20px;">
+                                @{{ currentPassword.password }}
+                            </h4>
+                        </div>
                     </div>
                 </div>
 

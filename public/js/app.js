@@ -1921,6 +1921,7 @@ if (document.getElementById(appId)) {
             qrCodeUrl: '',
             password: '',
             passwordList: [],
+            currentPassword: {},
             window: 4,
             currentTimestamp: 0,
             error: '',
@@ -1990,12 +1991,6 @@ if (document.getElementById(appId)) {
 
                 return typeof this.passwordList.find(this.__passwordIsValid) !== 'undefined';
             },
-
-
-            addToPasswordList: function addToPasswordList(password) {
-                this.passwordList[password] = { password: password, isValid: true };
-            },
-
             __checkPassword: function __checkPassword() {
                 var _this6 = this;
 
@@ -2017,6 +2012,8 @@ if (document.getElementById(appId)) {
                     _this6.currentTimestamp = response.data.currentTimestamp;
 
                     _this6.busy = false;
+
+                    _this6.__requestCurrentPassword();
                 }).catch(function (error) {
                     return _this6.busy = false;
                 });
@@ -2026,6 +2023,16 @@ if (document.getElementById(appId)) {
             },
             __clearList: function __clearList() {
                 this.passwordList = [];
+            },
+
+
+            __requestCurrentPassword: function __requestCurrentPassword() {
+                var me = this;
+
+                axios.get(Laravel.apiPrefix + '/google2fa/current/' + this.secretKey).then(function (response) {
+                    console.log(response.data);
+                    me.currentPassword = response.data;
+                });
             }
         },
 

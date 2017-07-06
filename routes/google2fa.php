@@ -55,6 +55,15 @@ Route::group(['prefix' => '/api/v1/google2fa'], function () {
         ];
     });
 
+    Route::get('/current/{secretKey}', function ($secretKey) {
+        return [
+            'password' => Google2FA::getCurrentOtp($secretKey),
+            'microtime' => microtime(true),
+            'timestamp' => Google2FA::getTimestamp(),
+            'key_regeneration' => Google2FA::getKeyRegeneration(),
+        ];
+    });
+
     Route::get('/qr-code-url/{company}/{email}/{secretKey}', function ($company, $email, $secretKey) {
         $google2fa_url = Google2FA::getQRCodeGoogleUrl(
             $company,
