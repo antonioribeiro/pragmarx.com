@@ -15,8 +15,10 @@ class ServerCleaner
         $this->printHeader('PURGING OLD KERNELS', true);
         $this->purgeOldKernels();
 
-        $this->printHeader('APT AUTO REMOVING PACKAGES', true);
-        $this->execShellCommand('sudo apt-get autoremove --purge', true);
+        if ($this->run) {
+            $this->printHeader('APT AUTO REMOVING PACKAGES', true);
+            $this->execShellCommand('sudo apt-get autoremove --purge', true);
+        }
     }
 
     private function checkFirstKernelIsCurrentKernel($currentKernel, $versions, $packages)
