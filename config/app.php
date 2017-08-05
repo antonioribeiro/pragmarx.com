@@ -171,7 +171,6 @@ return [
         PragmaRX\Health\ServiceProvider::class,
         PrettyRoutes\ServiceProvider::class,
         // PragmaRX\Google2FA\Vendor\Laravel\ServiceProvider::class,
-        Laravel\Dusk\DuskServiceProvider::class,
 
         /*
          * Application Service Providers...
