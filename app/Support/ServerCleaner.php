@@ -105,6 +105,11 @@ class ServerCleaner
         return "uname -r";
     }
 
+    private function getProtectFirst()
+    {
+        return max(2, $this->protectFirst);
+    }
+
     private function getPurgePackageCommand($package)
     {
         return 'sudo apt-get purge --yes '.$package;
@@ -138,7 +143,7 @@ class ServerCleaner
 
         $this->checkFirstKernelIsCurrentKernel($currentKernel, $keepVersions, $packages);
 
-        $discardVersions = $keepVersions->splice($this->protectFirst);
+        $discardVersions = $keepVersions->splice($this->getProtectFirst());
 
         $this->printHeader('Current kernel packages (protected)');
 
