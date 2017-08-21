@@ -13,12 +13,14 @@
         "laravel/framework": "^5.4",
         "laravel/tinker": "~1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "pragmarx/countries": "dev-master",
+        "predis/predis": "^1.0",
         "pragmarx/firewall": "dev-master",
-        "pragmarx/google2fa-laravel": "dev-master",
         "pragmarx/health": "dev-master",
-        "pragmarx/tracker": "dev-master",
-        "predis/predis": "^1.0"
+        "pragmarx/google2fa-laravel": "dev-master",
+        "pragmarx/countries": "dev-master"
+    },
+    "save": {
+        "pragmarx/tracker": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

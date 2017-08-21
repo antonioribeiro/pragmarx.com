@@ -10,6 +10,8 @@ class ServerCleaner
 
     private $run;
 
+    private $addSudo = true;
+
     public function clean()
     {
         $this->printHeader('PURGING OLD KERNELS', true);
@@ -17,7 +19,7 @@ class ServerCleaner
 
         if ($this->run) {
             $this->printHeader('APT AUTO REMOVING PACKAGES', true);
-            $this->execShellCommand('sudo apt-get autoremove --purge', true);
+            $this->execShellCommand('apt-get autoremove --purge', true);
         }
     }
 
@@ -40,6 +42,10 @@ class ServerCleaner
 
     protected function execShellCommand($command, $print = false)
     {
+        if ($this->addSudo) {
+            $command = "sudo {$command}";
+        }
+
         $output = shell_exec($command);
 
         if ($print) {
@@ -114,7 +120,7 @@ class ServerCleaner
 
     private function getPurgePackageCommand($package)
     {
-        return 'sudo apt-get purge --yes '.$package;
+        return 'apt-get purge --yes '.$package;
     }
 
     private function printHeader($string, $strong = false)
