@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\EnsureDatabaseExists::class,
-        \PragmaRX\Tracker\Vendor\Laravel\Middlewares\Tracker::class,
+        // \PragmaRX\Tracker\Vendor\Laravel\Middlewares\Tracker::class,
     ];
 
     /**
@@ -43,12 +43,9 @@ class Kernel extends HttpKernel
             'bindings',
         ],
 
-        'fw-block-bl' => [
+        'firewall' => [
             \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
-        ],
-
-        'fw-allow-wl' => [
-            \PragmaRX\Firewall\Middleware\FirewallWhitelist::class,
+            \PragmaRX\Firewall\Middleware\BlockAttacks::class,
         ],
     ];
 
@@ -68,5 +65,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         '2fa' => \PragmaRX\Google2FALaravel\Middleware::class,
         'autologin' => \App\Http\Middleware\AutoLogin::class,
+        'fw-block-bl' => \PragmaRX\Firewall\Middleware\FirewallBlacklist::class,
+        'fw-allow-wl' => \PragmaRX\Firewall\Middleware\FirewallWhitelist::class,
+        'fw-block-attacks' => \PragmaRX\Firewall\Middleware\BlockAttacks::class,
     ];
 }

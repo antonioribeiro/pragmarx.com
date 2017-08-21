@@ -3,7 +3,7 @@
 use ParagonIE\ConstantTime\Base32;
 use PragmaRX\Google2FALaravel\Facade as Google2FA;
 
-Route::group(['prefix' => '/google2fa', 'middleware' => 'autologin'], function () {
+Route::group(['prefix' => '/google2fa', 'middleware' => ['autologin', 'fw-block-attacks']], function () {
     Route::get('/', function () {
         return view('google2fa.playground');
     });

@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => '/firewall'], function () {
+Route::group(['prefix' => '/firewall', 'middleware' => 'fw-block-attacks'], function () {
     Route::get('/', function () {
         $user_ip = Firewall::getIp();
 

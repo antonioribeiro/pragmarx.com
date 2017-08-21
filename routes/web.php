@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'firewall'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });
 
 require base_path('routes/firewall.php');
 require base_path('routes/google2fa.php');
-
