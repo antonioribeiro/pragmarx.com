@@ -156,7 +156,7 @@ return [
         'enabled' => [
             'ip' => true,
 
-            'country' => false,
+            'country' => true,
         ],
 
         'cache_key_prefix' => 'firewall-attack-blocker',
