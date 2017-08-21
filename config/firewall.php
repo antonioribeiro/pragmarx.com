@@ -259,7 +259,7 @@ return [
         ],
 
         'users' => [
-            'model' => PragmaRX\Firewall\Vendor\Laravel\Models\User::class,
+            'model' => App\Data\Entities\User::class,
 
             'emails' => [
                 'admin@mydomain.com',
