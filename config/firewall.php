@@ -3,6 +3,13 @@
 return [
 
     /*
+     * Enable / disable firewall
+     *
+     */
+
+    'enabled' => env('FIREWALL_ENABLED', true),
+
+    /*
      * Blacklisted IP  addresses, ranges, countries, files and/or files of files
      *
      */
@@ -114,7 +121,7 @@ return [
      * Should Firewall use the database?
      */
 
-    'use_database' => false,
+    'use_database' => true,
 
     /*
      * Models
