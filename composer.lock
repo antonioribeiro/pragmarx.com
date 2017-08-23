@@ -8,19 +8,23 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.33.4",
+            "version": "3.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "586a9c0e52664cfc4d2d91f9dcdf3ea48d143162"
+                "reference": "df7ddca6872048cc91315c2b4fdb9a57d5fceb84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/586a9c0e52664cfc4d2d91f9dcdf3ea48d143162",
-                "reference": "586a9c0e52664cfc4d2d91f9dcdf3ea48d143162",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/df7ddca6872048cc91315c2b4fdb9a57d5fceb84",
+                "reference": "df7ddca6872048cc91315c2b4fdb9a57d5fceb84",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "ext-spl": "*",
                 "guzzlehttp/guzzle": "^5.3.1|^6.2.1",
                 "guzzlehttp/promises": "~1.0",
                 "guzzlehttp/psr7": "^1.4.1",
@@ -33,11 +37,7 @@
                 "behat/behat": "~3.0",
                 "doctrine/cache": "~1.4",
                 "ext-dom": "*",
-                "ext-json": "*",
                 "ext-openssl": "*",
-                "ext-pcre": "*",
-                "ext-simplexml": "*",
-                "ext-spl": "*",
                 "nette/neon": "^2.3",
                 "phpunit/phpunit": "^4.8.35|^5.4.0",
                 "psr/cache": "^1.0"
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-21T20:34:30+00:00"
+            "time": "2017-08-22T18:32:28+00:00"
         },
         {
             "name": "commercie/currency",
@@ -1339,12 +1339,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b55b106a99e84fe02040a06777f9836bcae86109"
+                "reference": "60860f3fdb277154606a1f3584104ed97d24d16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b55b106a99e84fe02040a06777f9836bcae86109",
-                "reference": "b55b106a99e84fe02040a06777f9836bcae86109",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/60860f3fdb277154606a1f3584104ed97d24d16a",
+                "reference": "60860f3fdb277154606a1f3584104ed97d24d16a",
                 "shasum": ""
             },
             "require": {
@@ -1407,7 +1407,7 @@
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
                 "doctrine/dbal": "~2.5",
-                "filp/whoops": "~2.0",
+                "filp/whoops": "^2.1.4",
                 "mockery/mockery": "~0.9.4",
                 "orchestra/testbench-core": "3.5.*",
                 "pda/pheanstalk": "~3.0",
@@ -1463,7 +1463,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-08-21 18:48:30"
+            "time": "2017-08-23 13:02:52"
         },
         {
             "name": "laravel/tinker",
@@ -2373,12 +2373,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/firewall.git",
-                "reference": "44e8bf4e33fbaa0a545018905ac0c15d69b21773"
+                "reference": "d105951af86e9a014910a4e373f7c061c28abbc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/44e8bf4e33fbaa0a545018905ac0c15d69b21773",
-                "reference": "44e8bf4e33fbaa0a545018905ac0c15d69b21773",
+                "url": "https://api.github.com/repos/antonioribeiro/firewall/zipball/d105951af86e9a014910a4e373f7c061c28abbc9",
+                "reference": "d105951af86e9a014910a4e373f7c061c28abbc9",
                 "shasum": ""
             },
             "require": {
@@ -2429,7 +2429,7 @@
                 "laravel",
                 "whitelist"
             ],
-            "time": "2017-08-21 22:17:23"
+            "time": "2017-08-23 14:00:56"
         },
         {
             "name": "pragmarx/google2fa",
@@ -2645,12 +2645,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/support.git",
-                "reference": "59e5fb8855ae5716f10bce0c55e14a12e9062a30"
+                "reference": "776b3e63171161cf0e17fff240f90547aed8646c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/59e5fb8855ae5716f10bce0c55e14a12e9062a30",
-                "reference": "59e5fb8855ae5716f10bce0c55e14a12e9062a30",
+                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/776b3e63171161cf0e17fff240f90547aed8646c",
+                "reference": "776b3e63171161cf0e17fff240f90547aed8646c",
                 "shasum": ""
             },
             "require": {
@@ -2691,7 +2691,7 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2017-08-20 06:22:22"
+            "time": "2017-08-21 23:55:21"
         },
         {
             "name": "pragmarx/tracker",
@@ -2699,12 +2699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/tracker.git",
-                "reference": "4b5bea43a0d58a77786d51de9e3b91e3656ef9b9"
+                "reference": "116931723a5ab3e97ead69ee0a9c35293938d713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/4b5bea43a0d58a77786d51de9e3b91e3656ef9b9",
-                "reference": "4b5bea43a0d58a77786d51de9e3b91e3656ef9b9",
+                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/116931723a5ab3e97ead69ee0a9c35293938d713",
+                "reference": "116931723a5ab3e97ead69ee0a9c35293938d713",
                 "shasum": ""
             },
             "require": {
@@ -2713,7 +2713,7 @@
                 "laravel/framework": "~4|~5",
                 "php": ">=5.3.7",
                 "pragmarx/datatables": "1.4.11",
-                "pragmarx/support": "~0.6",
+                "pragmarx/support": "~0.6|~0.7",
                 "ramsey/uuid": "~3",
                 "snowplow/referer-parser": "~0.1",
                 "ua-parser/uap-php": "~3.4"
@@ -2766,7 +2766,7 @@
                 "user agent",
                 "visitor"
             ],
-            "time": "2017-08-21T22:07:39+00:00"
+            "time": "2017-08-21T22:31:54+00:00"
         },
         {
             "name": "predis/predis",
@@ -3213,12 +3213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "61fb19d7e0567993663813f3291886011265d966"
+                "reference": "bd3da52d22c6abfc808c2f9c56aca652e66d9e9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/61fb19d7e0567993663813f3291886011265d966",
-                "reference": "61fb19d7e0567993663813f3291886011265d966",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/bd3da52d22c6abfc808c2f9c56aca652e66d9e9a",
+                "reference": "bd3da52d22c6abfc808c2f9c56aca652e66d9e9a",
                 "shasum": ""
             },
             "require": {
@@ -3254,13 +3254,13 @@
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
+            "homepage": "http://swiftmailer.symfony.com",
             "keywords": [
                 "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2017-08-10 12:27:54"
+            "time": "2017-08-22 22:08:15"
         },
         {
             "name": "symfony/console",
@@ -3607,12 +3607,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66"
+                "reference": "9cc8019b5d013f3b0dda7f1ba5596677229562b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66",
-                "reference": "b7e34ba2eb4d0ac9eb0c2d46b20d9136fde5fa66",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9cc8019b5d013f3b0dda7f1ba5596677229562b9",
+                "reference": "9cc8019b5d013f3b0dda7f1ba5596677229562b9",
                 "shasum": ""
             },
             "require": {
@@ -3652,7 +3652,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-10 07:07:17"
+            "time": "2017-08-22 20:48:27"
         },
         {
             "name": "symfony/http-kernel",
@@ -4039,12 +4039,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "62bb068e004874bbe39624101e1aae70ca7c05cd"
+                "reference": "d40001c5183b66bf98866369e67c98aa280211ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/62bb068e004874bbe39624101e1aae70ca7c05cd",
-                "reference": "62bb068e004874bbe39624101e1aae70ca7c05cd",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/d40001c5183b66bf98866369e67c98aa280211ac",
+                "reference": "d40001c5183b66bf98866369e67c98aa280211ac",
                 "shasum": ""
             },
             "require": {
@@ -4098,7 +4098,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-03 12:04:31"
+            "time": "2017-08-22 21:55:52"
         },
         {
             "name": "symfony/var-dumper",
