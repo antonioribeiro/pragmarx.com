@@ -13,6 +13,7 @@
 
 Route::group(['middleware' => 'firewall'], function () {
     Route::get('/', function () {
+        dd();
         return view('welcome');
     });
 });
