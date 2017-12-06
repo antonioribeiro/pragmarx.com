@@ -15,14 +15,6 @@ return [
      */
 
     'blacklist' => [
-        // '127.0.0.1',
-        // '192.168.17.0/24'
-        // '127.0.0.1/255.255.255.255'
-        // '10.0.0.1-10.0.0.255'
-        // '172.17.*.*'
-        // 'country:br'
-        // 'host:google.com',
-        // storage_path().DIRECTORY_SEPARATOR.'blacklisted.txt',
     ],
 
     /*
@@ -31,14 +23,6 @@ return [
      */
 
     'whitelist' => [
-        // '127.0.0.2',
-        // '192.168.18.0/24'
-        // '127.0.0.2/255.255.255.255'
-        // '10.0.1.1-10.0.1.255'
-        // '172.16.*.*'
-        // 'country:ch'
-        // 'host:google.com',
-        // storage_path().DIRECTORY_SEPARATOR.'whitelisted.txt',
     ],
 
     /*
@@ -70,15 +54,19 @@ return [
     /*
      * How long should we keep IP addresses in cache?
      *
+     * This is a general client IP addresses cache. When the user hits your ssytem his/her IP address
+     * is searched and cached for the desiered time. Finding an IP address contained in a CIDR
+     * range (172.17.0.0/24, for instance) can be a "slow", caching it improves performance.
+     *
      */
 
     'cache_expire_time' => 0, // minutes - disabled by default
 
     /*
-     *--------------------------------------------------------------------------
      * How long should we keep lists of IP addresses in cache?
-     *--------------------------------------------------------------------------
      *
+     * This is the list cache. Database lists can take some time to load and process,
+     * caching it, if you are not making frequent changes to your lists, may improve firewall speed a lot.
      */
 
     'ip_list_cache_expire_time' => 0, // minutes - disabled by default

@@ -65,4 +65,10 @@ return [
         'wrong_otp' => "The 'One Time Password' typed was wrong."
     ],
 
+    /*
+     * Recovery/backup codes
+     */
+    'recovery' => [
+        'enabled' => true,
+    ],
 ];

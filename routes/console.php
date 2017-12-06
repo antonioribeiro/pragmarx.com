@@ -11,5 +11,9 @@ Artisan::command('health:server-clean {--run} {--protect=}', function () {
 })->describe('');
 
 Artisan::command('test', function () {
-    dd(new FirewallTestCase);
+    collect([1, 3])->dump(5);
+
+    echo "------------------------------------------\n";
+
+    collect([1, 3])->dd(5);
 })->describe('');

@@ -38,6 +38,9 @@
                 <li class="nav-item {{ request()->is('google2fa') ? 'active' : '' }}">
                     <a class="nav-link" href="/google2fa">Google2FA Test Page</a>
                 </li>
+                <li class="nav-item {{ request()->is('google2fa') ? 'active' : '' }}">
+                    <a class="nav-link" href="/countries">Countries Test Page</a>
+                </li>
             </ul>
 
             @if ($user = Auth::user())

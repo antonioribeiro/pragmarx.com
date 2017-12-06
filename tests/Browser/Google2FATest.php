@@ -20,7 +20,7 @@ class Google2FATest extends DuskTestCase
                     ->waitForText('Middleware Demo')
                     ->type('one_time_password', Google2FA::getCurrentOtp(env('GOOGLE2FA_TEST_SECRET')))
                     ->press('Authenticate')
-                    ->waitForText("your 'One Time Password' was correct")
+                    ->waitForText("can find this")
             ;
         });
     }

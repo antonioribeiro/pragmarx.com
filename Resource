@@ -1,0 +1,2 @@
+Cannot open file "/Users/antoniocarlos/code/pragmarx/pragmarx.com/tests/Browser/ExampleTest/usr/bin/tee.php".
+
