@@ -29,7 +29,8 @@
         "pragmarx/google2fa-laravel": "dev-master",
         "pragmarx/health": "dev-master",
         "pragmarx/random": "^0.2.0",
-        "pragmarx/tracker": "dev-master",
+        "pragmarx/tracker": "v4.0.x-dev",
+        "pragmarx/version": "^0.2.1",
         "predis/predis": "^1.0"
     },
 

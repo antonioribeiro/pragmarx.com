@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "086d1d42b20180c40bb0494d4df5fd7f",
+    "content-hash": "e88cec5658d39ac919be83d4d1503985",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.45.0",
+            "version": "3.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c1cd58ab818c38fdfb5ccf94a9222b1189f3ff75"
+                "reference": "30c021958edfbe267d062e3b6356c7f8a94d1ea0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c1cd58ab818c38fdfb5ccf94a9222b1189f3ff75",
-                "reference": "c1cd58ab818c38fdfb5ccf94a9222b1189f3ff75",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/30c021958edfbe267d062e3b6356c7f8a94d1ea0",
+                "reference": "30c021958edfbe267d062e3b6356c7f8a94d1ea0",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-05T22:42:22+00:00"
+            "time": "2017-12-06T21:44:04+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -2493,12 +2493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/ci.git",
-                "reference": "76b25317e703620cc5e72e3c107850ac6c50323e"
+                "reference": "a456ac5a5de85761a5adc42caa7d17ce4433c16b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/ci/zipball/76b25317e703620cc5e72e3c107850ac6c50323e",
-                "reference": "76b25317e703620cc5e72e3c107850ac6c50323e",
+                "url": "https://api.github.com/repos/antonioribeiro/ci/zipball/a456ac5a5de85761a5adc42caa7d17ce4433c16b",
+                "reference": "a456ac5a5de85761a5adc42caa7d17ce4433c16b",
                 "shasum": ""
             },
             "require": {
@@ -2562,7 +2562,7 @@
                 "testing",
                 "watcher"
             ],
-            "time": "2017-11-02T15:00:50+00:00"
+            "time": "2017-12-06T22:28:03+00:00"
         },
         {
             "name": "pragmarx/coollection",
@@ -3160,53 +3160,47 @@
         },
         {
             "name": "pragmarx/tracker",
-            "version": "dev-master",
+            "version": "v4.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/tracker.git",
-                "reference": "e44d88bc33035d2a5921456dce3dd35f64118867"
+                "reference": "3822592293d640b71ec572afdab76cdb6a2e8c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/e44d88bc33035d2a5921456dce3dd35f64118867",
-                "reference": "e44d88bc33035d2a5921456dce3dd35f64118867",
+                "url": "https://api.github.com/repos/antonioribeiro/tracker/zipball/3822592293d640b71ec572afdab76cdb6a2e8c4d",
+                "reference": "3822592293d640b71ec572afdab76cdb6a2e8c4d",
                 "shasum": ""
             },
             "require": {
-                "jaybizzle/crawler-detect": "~1.0",
-                "jenssegers/agent": "~2.1",
-                "laravel/framework": "~4|~5",
-                "php": ">=5.3.7",
+                "jaybizzle/crawler-detect": "^1.2",
+                "jenssegers/agent": "^2.6",
+                "laravel/framework": "^5.5",
+                "php": "^7.0",
                 "pragmarx/datatables": "1.4.11",
-                "pragmarx/support": "~0.6|~0.7",
-                "ramsey/uuid": "~3",
-                "snowplow/referer-parser": "~0.1",
-                "ua-parser/uap-php": "~3.4"
+                "pragmarx/yaml": "^0.1",
+                "snowplow/referer-parser": "dev-master#r2017-06"
             },
             "require-dev": {
-                "mockery/mockery": "~0.8"
-            },
-            "suggest": {
-                "geoip/geoip": "~1.14",
-                "geoip2/geoip2": "~2.0"
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                },
+                "component": "package",
                 "laravel": {
                     "providers": [
-                        "PragmaRX\\Tracker\\Vendor\\Laravel\\ServiceProvider"
+                        "PragmaRX\\Tracker\\Package\\ServiceProvider"
                     ],
                     "aliases": {
-                        "Tracker": "PragmaRX\\Tracker\\Vendor\\Laravel\\Facade"
+                        "Tracker": "PragmaRX\\Tracker\\Package\\Facade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PragmaRX\\Tracker\\": "src/"
+                    "PragmaRX\\Tracker\\Package\\": "src/package",
+                    "PragmaRX\\Tracker\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3220,7 +3214,7 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "A Laravel Visitor Tracker",
+            "description": "A Laravel Visitor Stats Tracker",
             "keywords": [
                 "laravel",
                 "logging",
@@ -3231,7 +3225,128 @@
                 "user agent",
                 "visitor"
             ],
-            "time": "2017-10-04T15:54:25+00:00"
+            "time": "2017-12-06T18:24:14+00:00"
+        },
+        {
+            "name": "pragmarx/version",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/version.git",
+                "reference": "fd2eec365012f2f6e00a20f39e23e8efb8913ae9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/version/zipball/fd2eec365012f2f6e00a20f39e23e8efb8913ae9",
+                "reference": "fd2eec365012f2f6e00a20f39e23e8efb8913ae9",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5",
+                "php": "^7.0",
+                "pragmarx/yaml": "^0.1",
+                "symfony/process": "^3.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\Version\\Package\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Version": "PragmaRX\\Version\\Package\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\Version\\Package\\": "src/package",
+                    "PragmaRX\\Version\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Carlos Ribeiro",
+                    "email": "acr@antoniocarlosribeiro.com",
+                    "role": "Creator & Designer"
+                }
+            ],
+            "description": "Take control over your Laravel app version",
+            "keywords": [
+                "laravel",
+                "version",
+                "versioning"
+            ],
+            "time": "2017-12-02T23:56:29+00:00"
+        },
+        {
+            "name": "pragmarx/yaml",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/yaml.git",
+                "reference": "b510623eb5008cc468e00a31259a3c860dd2b267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/yaml/zipball/b510623eb5008cc468e00a31259a3c860dd2b267",
+                "reference": "b510623eb5008cc468e00a31259a3c860dd2b267",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5",
+                "php": "^7.0",
+                "symfony/yaml": "^3.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\Yaml\\Package\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Yaml": "PragmaRX\\Yaml\\Package\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\Yaml\\Package\\": "src/package",
+                    "PragmaRX\\Yaml\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Carlos Ribeiro",
+                    "email": "acr@antoniocarlosribeiro.com",
+                    "role": "Creator & Designer"
+                }
+            ],
+            "description": "Load your Laravel config files using yaml",
+            "keywords": [
+                "config",
+                "laravel",
+                "yaml"
+            ],
+            "time": "2017-12-05T20:32:21+00:00"
         },
         {
             "name": "predis/predis",
@@ -4044,16 +4159,16 @@
         },
         {
             "name": "snowplow/referer-parser",
-            "version": "0.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/snowplow/referer-parser.git",
-                "reference": "5ce872b60999c63039723959a45928ef1196f03d"
+                "reference": "56269670a35395b3955e8bfa6c1ef9fe897a288f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/5ce872b60999c63039723959a45928ef1196f03d",
-                "reference": "5ce872b60999c63039723959a45928ef1196f03d",
+                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/56269670a35395b3955e8bfa6c1ef9fe897a288f",
+                "reference": "56269670a35395b3955e8bfa6c1ef9fe897a288f",
                 "shasum": ""
             },
             "require-dev": {
@@ -4080,7 +4195,7 @@
                 }
             ],
             "description": "Snowplow Refer(r)er parser for PHP",
-            "time": "2016-01-29T16:43:00+00:00"
+            "time": "2017-11-03T17:00:11+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4377,55 +4492,6 @@
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
             "time": "2017-11-09T17:30:28+00:00"
-        },
-        {
-            "name": "symfony/filesystem",
-            "version": "v3.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "de56eee71e0a128d8c54ccc1909cdefd574bad0f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/de56eee71e0a128d8c54ccc1909cdefd574bad0f",
-                "reference": "de56eee71e0a128d8c54ccc1909cdefd574bad0f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Filesystem\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Filesystem Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-11-19T18:59:05+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5212,56 +5278,6 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2016-09-20T12:50:39+00:00"
-        },
-        {
-            "name": "ua-parser/uap-php",
-            "version": "v3.4.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "ea47d0b12517670270930938c063d899b420019b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/ea47d0b12517670270930938c063d899b420019b",
-                "reference": "ea47d0b12517670270930938c063d899b420019b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/console": "^2.0 || ^3.0",
-                "symfony/filesystem": "^2.0 || ^3.0",
-                "symfony/finder": "^2.0 || ^3.0",
-                "symfony/yaml": "^2.0 || ^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0"
-            },
-            "bin": [
-                "bin/uaparser"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "UAParser\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lars Strojny",
-                    "email": "lars@strojny.net"
-                },
-                {
-                    "name": "Dave Olsen",
-                    "email": "dmolsen@gmail.com"
-                }
-            ],
-            "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2017-02-26T19:11:57+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
