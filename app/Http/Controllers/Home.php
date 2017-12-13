@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Packagist;
+use App\Services\Packagist\Service as Packagist;
 
 class Home extends Controller
 {

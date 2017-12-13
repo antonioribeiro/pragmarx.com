@@ -32,7 +32,8 @@
         "pragmarx/random": "^0.2.0",
         "pragmarx/tddd": "dev-master",
         "pragmarx/tracker": "dev-master",
-        "predis/predis": "^1.0"
+        "predis/predis": "^1.0",
+        "knplabs/github-api": "dev-master#29f8032fcecedfc15b6cadfa93fc606f4e8657ec"
     },
 
     "require-dev": {
@@ -50,6 +51,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/antonioribeiro/coolection"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/antonioribeiro/php-github-api"
         }
     ],
 

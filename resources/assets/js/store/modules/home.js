@@ -26,7 +26,7 @@ const getters = {
 
                 const s2 = repository.description.search(new RegExp(state.filterPackages, "i")) !== -1
 
-                const s3 = repository.versions['dev-master'].keywords.filter(function(keyword) {
+                const s3 = repository.keywords.filter(function(keyword) {
                     return keyword.search(new RegExp(state.filterPackages, "i")) !== -1
                 }).length > 0
 

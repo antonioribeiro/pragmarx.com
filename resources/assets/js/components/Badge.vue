@@ -20,7 +20,7 @@
             },
 
             __keywords(repository) {
-                return repository.versions['dev-master'].keywords
+                return repository.keywords
             },
 
             __addToFilter(text) {
