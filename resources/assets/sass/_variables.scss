@@ -2,6 +2,8 @@
 // Body
 $body-bg: #f5f8fa;
 
+$fa-font-path: "../font";
+
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
 $list-group-border: $laravel-border-color;

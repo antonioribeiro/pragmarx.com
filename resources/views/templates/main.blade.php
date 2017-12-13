@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,14 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <title>PragmRX</title>
-
-        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"
-              type="text/css">
-
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
-              integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
-              crossorigin="anonymous">
 
         <link rel="stylesheet" href="/css/app.css">
 
@@ -25,66 +16,26 @@
                 'apiPrefix' => '/api/v1',
             ]) !!};
         </script>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
     </head>
 
-    <body>
-        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-            <a class="navbar-brand" href="/">PragmaRX</a>
+    <body class="bg-grey-light">
+        <div id="vue-root">
+            <nav class="flex items-center justify-between flex-wrap bg-red-dark p-6">
+                <div class="flex items-center flex-no-shrink text-white mr-6">
+                    <span class="text-3xl tracking-tight">
+                        <a href="/">PragmaRX</a>
+                    </span>
+                </div>
 
-            <ul class="nav navbar-nav">
-                <li class="nav-item {{ request()->is('firewall') ? 'active' : '' }}">
-                    <a class="nav-link" href="/firewall">Firewall Test Page</a>
-                </li>
-                <li class="nav-item {{ request()->is('google2fa') ? 'active' : '' }}">
-                    <a class="nav-link" href="/google2fa">Google2FA Test Page</a>
-                </li>
-                <li class="nav-item {{ request()->is('google2fa') ? 'active' : '' }}">
-                    <a class="nav-link" href="/countries">Countries Test Page</a>
-                </li>
-            </ul>
+                <main-menu></main-menu>
+            </nav>
 
-            @if ($user = Auth::user())
-                <ul class="nav navbar-nav pull-right">
-                    <li class="nav-item">
-                        <span class="nav-text">
-                            <a href="/google2fa/middleware/logout">
-                                {{ $user->name }} ({{ $user->email }}) - logout
-                            </a>
-                        </span>
-                    </li>
-                </ul>
-            @endif
-        </nav>
-
-        <div class="container">
-            <div class="starter-template">
-                <body>
-                    <div class="container">
-                        <div class="row">
-                            <div class="content">
-                                @yield('content')
-                            </div>
-                        </div>
-                    </div>
-
-                    @include('githubRibbon')
-                </body>
+            <div class="mt-6">
+                <router-view></router-view>
             </div>
-        </div><!-- /.container -->
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
-                integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
-                crossorigin="anonymous">
-        </script>
-
-        <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+        </div>
 
         <script src="/js/app.js"></script>
 
@@ -100,7 +51,6 @@
 
             ga('create', 'UA-46685774-6', 'auto');
             ga('send', 'pageview');
-
         </script>
     </body>
 </html>

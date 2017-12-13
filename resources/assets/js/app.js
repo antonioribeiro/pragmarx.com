@@ -1,13 +1,9 @@
+require("./bootstrap.js")
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+require("./components/_bootstrap.js")
 
-require('./bootstrap');
-
-require('./main');
+require('./fonts');
 
 require('./google2fa');
 
+require("./root.js")
