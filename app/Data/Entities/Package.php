@@ -13,6 +13,10 @@ class Package
                 'title' => 'TDDD',
             ],
 
+            'pragmarx/laravelcs' => [
+                'title' => 'LaravelCS',
+            ],
+
             'pragmarx/google2fa' => [
                 'title' => 'Google2FA',
             ],
