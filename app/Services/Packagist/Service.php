@@ -2,12 +2,10 @@
 
 namespace App\Services\Packagist;
 
-use App\Services\GitHub\Service as GitHubService;
-use Cache;
 use GuzzleHttp\Client;
-use App\Data\Entities\Package;
 use Psr\Http\Message\StreamInterface;
 use PragmaRX\Coollection\Package\Coollection;
+use App\Services\GitHub\Service as GitHubService;
 
 class Service
 {
@@ -28,22 +26,17 @@ class Service
         $this->gitHub = $gitHub;
     }
 
-    /**
-     * @param $key
-     * @return Coollection
-     */
-    private function getPackageFromGitHub($key)
-    {
-        return $this->gitHub->repository($key);
-    }
-
     protected function makePackageInfoFromPackagistPackage($package)
     {
+        $package['github_only'] = false;
+
         $package['github_url'] = $package['repository'];
 
         $package['packagist_url'] = str_replace('.json', '', $this->makePackageUrl($package['name']));
 
         $package['keywords'] = $package['versions']['dev-master']['keywords'];
+
+        unset($package['versions']);
 
         return $package;
     }
@@ -87,23 +80,9 @@ class Service
      */
     public function getPackagesFromPackagist()
     {
-        return Cache::remember('packagist-packages', 300, function () {
-            return coollect(
-                $this->httpGet(static::PACKAGES_URL)->packageNames
-            );
-        });
-    }
-
-    /**
-     * @return Coollection
-     */
-    public function getPackagesFromGitHub()
-    {
-        Cache::remember('github-packages', 300, function () {
-            return Package::fromGitHub()->map(function($package, $key) {
-                return $package->merge($this->makePackageInfoFromGithubPackage($this->getPackageFromGitHub($key)));
-            });
-        });
+        return coollect(
+            $this->httpGet(static::PACKAGES_URL)->packageNames
+        );
     }
 
     protected function makePackageInfoFromGithubPackage($package)
@@ -116,7 +95,6 @@ class Service
                 'monthly' => -1,
                 'daily' => -1,
             ],
-            'github_stars' => $package->stargazers_count,
             'keywords' => $package->topics,
         ];
     }
@@ -130,62 +108,16 @@ class Service
         return str_replace('[vendor/package]', $package, static::PACKAGE_URL);
     }
 
-    private function mergeInfo($packageInfo)
-    {
-        if (!is_null($info = Package::get($packageInfo['name'])))
-        {
-            $packageInfo = array_merge($packageInfo->toArray(), $info);
-        }
-
-        return coollect($packageInfo);
-    }
-
     /**
      * @param $package
-     * @return static
+     * @return Coollection
      */
     public function getPackageInfoFromPackagist($package)
     {
-        return Cache::remember("packagist-$package", 300, function() use ($package) {
-            $package = coollect($this->httpGet($this->makePackageUrl($package))->package)
-                ->only('name', 'description', 'repository', 'downloads', 'github_stars', 'versions');
-
-            return $this->makePackageInfoFromPackagistPackage($package);
-        });
-    }
-
-    /**
-     * @return Coollection
-     */
-    public function packages()
-    {
-        return $this
-            ->getPackagesFromPackagist()
-            ->filter(function($package) {
-                return ! $this->excludablePackages()->contains($package);
-            })
-            ->mapWithKeys(function($package) {
-                $info = $this->mergeInfo($this->getPackageInfoFromPackagist($package));
-
-                if (!isset($info['title'])) {
-                    $info['title'] = $this->makePackageTitle($info);
-                }
-
-                return [
-                    $package => $info
-                ];
-            })
-            ->merge($this->getPackagesFromGitHub())
-            ->sortBy(
-                function ($package) {
-                    return -coollect($package)->downloads->total;
-                }
-            );
-    }
-
-    public function makePackageTitle($package)
-    {
-        return studly(explode('/', $package['name'])[1]);
+        return $this->makePackageInfoFromPackagistPackage(
+            coollect($this->httpGet($this->makePackageUrl($package))->package)
+                ->only('name', 'description', 'repository', 'downloads', 'versions')
+        );
     }
 
     /**

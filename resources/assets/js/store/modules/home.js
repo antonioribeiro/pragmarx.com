@@ -41,12 +41,13 @@ const getters = {
 }
 
 const actions = {
-    homeLoadPackages(context) {
+    homeLoadPackages(context, force) {
         context.commit('homeSetUpdating', true)
 
-        axios.get('/api/v1/packages')
-            .then(response => context.commit('homeSetPackages', response.data))
+        force = typeof force !== 'undefined' ? '?force=true' : ''
 
+        axios.get('/api/v1/packages'+force)
+            .then(response => context.commit('homeSetPackages', response.data))
     },
 
     homeSaveToBrowserStorageAction(context) {

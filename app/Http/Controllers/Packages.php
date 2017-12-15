@@ -2,25 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Packagist\Service as Packagist;
+use App\Services\Packages\Service as PackagesService;
+use Illuminate\Http\Request;
 
 class Packages extends Controller
 {
     /**
-     * @var Packagist
+     * @var PackagesService
      */
-    private $packagist;
+    private $packages;
 
-    public function __construct(Packagist $packagist)
+    public function __construct(PackagesService $packages)
     {
-        $this->packagist = $packagist;
+        $this->packages = $packages;
     }
 
-    public function all()
+    public function all(Request $request)
     {
+        if ($request->get('force')) {
+            $this->packages->purgeCache();
+        }
+
         return [
-            'packages' => $this->packagist->packages()->toArray(),
-            'summary' => $this->packagist->summary()->toArray(),
+            'packages' => $this->packages->packages()->toArray(),
         ];
     }
 }

@@ -43531,7 +43531,7 @@ var getters = {
 
                 var s2 = repository.description.search(new RegExp(state.filterPackages, "i")) !== -1;
 
-                var s3 = repository.versions['dev-master'].keywords.filter(function (keyword) {
+                var s3 = repository.keywords.filter(function (keyword) {
                     return keyword.search(new RegExp(state.filterPackages, "i")) !== -1;
                 }).length > 0;
 
@@ -43546,10 +43546,12 @@ var getters = {
 };
 
 var actions = {
-    homeLoadPackages: function homeLoadPackages(context) {
+    homeLoadPackages: function homeLoadPackages(context, force) {
         context.commit('homeSetUpdating', true);
 
-        axios.get('/api/v1/packages').then(function (response) {
+        force = typeof force !== 'undefined' ? '?force=true' : '';
+
+        axios.get('/api/v1/packages' + force).then(function (response) {
             return context.commit('homeSetPackages', response.data);
         });
     },
@@ -47397,20 +47399,16 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
+        var _this = this;
+
+        setInterval(function () {
+            _this.__forceUpdate();
+        }, 1000 * 30);
     },
 
 
@@ -47437,7 +47435,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         _count: function _count() {
             return Object.keys(this._repositories).length;
         }
-    })
+    }),
+
+    methods: {
+        __forceUpdate: function __forceUpdate() {
+            return this.$store.dispatch('homeLoadPackages', true);
+        }
+    }
 });
 
 /***/ }),
@@ -47453,7 +47457,7 @@ var render = function() {
       "div",
       { staticClass: "text-center text-5xl text-red-dark mb-8 font-black" },
       [
-        _vm._v("\n        We Make Laravel & PHP Packages\n\n        "),
+        _vm._v("\n        We Forge Laravel Apps & PHP Packages\n\n        "),
         _vm._updating
           ? _c("span", [
               _c("i", {
@@ -47471,7 +47475,8 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8"
+            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8",
+            attrs: { title: "Repositories" }
           },
           [
             _vm._m(0, false, false),
@@ -47483,7 +47488,8 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8"
+            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8",
+            attrs: { title: "Downloads" }
           },
           [
             _vm._m(1, false, false),
@@ -47495,7 +47501,8 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8"
+            staticClass: "text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8",
+            attrs: { title: "Github stars" }
           },
           [
             _vm._m(2, false, false),
@@ -47519,24 +47526,16 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "flex" }, [
-      _c("div", { staticClass: "w-1/6 p-2" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "w-auto p-2" }, [
-        _c(
-          "div",
-          { staticClass: "flex flex-wrap" },
-          _vm._l(_vm._repositories, function(repository) {
-            return _c("package-card", {
-              key: repository.name,
-              attrs: { repository: repository }
-            })
-          })
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "w-1/6 p-2" })
-    ])
+    _c(
+      "div",
+      { staticClass: "flex flex-wrap" },
+      _vm._l(_vm._repositories, function(repository) {
+        return _c("package-card", {
+          key: repository.name,
+          attrs: { repository: repository }
+        })
+      })
+    )
   ])
 }
 var staticRenderFns = [
@@ -47678,6 +47677,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['repository'],
@@ -47689,7 +47692,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return number.toLocaleString();
         },
         __keywords: function __keywords(repository) {
-            return repository.versions['dev-master'].keywords;
+            return repository.keywords;
         },
         __open: function __open(url) {
             window.open(url, '_blank');
@@ -47705,126 +47708,139 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass:
-        "w-1/3 max-w-sm m-4 rounded overflow-hidden shadow border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
-    },
-    [
-      _c("div", { staticClass: "mb-2" }, [
-        _c("div", { staticClass: "flex mb-4" }, [
-          _c(
-            "div",
-            {
-              staticClass: "flex-1 text-black font-bold text-xl cursor-pointer",
-              on: {
-                click: function($event) {
-                  _vm.__open(_vm.repository.github_url)
+  return _c("div", { staticClass: "w-full md:w-1/2 xl:w-1/3 p-4" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "bg-white h-full flex flex-col p-4 justify-between leading-normal rounded overflow-hidden shadow border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light rounded-b lg:rounded-b-none lg:rounded-r"
+      },
+      [
+        _c("div", { staticClass: "mb-2" }, [
+          _c("div", { staticClass: "flex mb-4" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "flex-1 text-black font-bold text-xl cursor-pointer",
+                on: {
+                  click: function($event) {
+                    _vm.__open(_vm.repository.github_url)
+                  }
                 }
-              }
-            },
-            [
-              _vm._v(
-                "\n                " +
-                  _vm._s(_vm.repository.title) +
-                  "\n            "
-              )
-            ]
-          ),
+              },
+              [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.repository.title) +
+                    "\n                "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass:
+                  "flex-1 text-sm text-grey-dark text-right cursor-pointer",
+                on: {
+                  click: function($event) {
+                    _vm.__open(
+                      _vm.repository.github_only
+                        ? _vm.repository.github_url
+                        : _vm.repository.packagist_url
+                    )
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.repository.name) +
+                    "\n                "
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-black mb-2" }, [
+            _vm._v(_vm._s(_vm.repository.description))
+          ]),
           _vm._v(" "),
           _c(
-            "p",
-            {
-              staticClass:
-                "flex-1 text-sm text-grey-dark text-right cursor-pointer",
-              on: {
-                click: function($event) {
-                  _vm.__open(_vm.repository.packagist_url)
-                }
-              }
-            },
-            [
-              _vm._v(
-                "\n                " +
-                  _vm._s(_vm.repository.name) +
-                  "\n            "
+            "div",
+            { staticClass: "text-red mb-4" },
+            _vm._l(_vm.__keywords(_vm.repository), function(keyword) {
+              return _c(
+                "span",
+                { key: keyword },
+                [_c("badge", { attrs: { text: keyword } })],
+                1
               )
-            ]
+            })
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "text-black mb-2" }, [
-          _vm._v(_vm._s(_vm.repository.description))
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "text-red mb-4" },
-          _vm._l(_vm.__keywords(_vm.repository), function(keyword) {
-            return _c(
-              "span",
-              { key: keyword },
-              [_c("badge", { attrs: { text: keyword } })],
-              1
+        _c("div", { staticClass: "flex items-center" }, [
+          _vm.repository.downloads.total > -1
+            ? _c("div", { staticClass: "flex-1" }, [
+                _c(
+                  "p",
+                  {
+                    staticClass: "text-blue leading-none cursor-pointer",
+                    attrs: { title: "Downloads" },
+                    on: {
+                      click: function($event) {
+                        _vm.__open(_vm.repository.packagist_url)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fas fa-download",
+                      staticStyle: { "font-size": "1.5em" }
+                    }),
+                    _vm._v(
+                      " " +
+                        _vm._s(
+                          _vm.__formatNumber(_vm.repository.downloads.total)
+                        ) +
+                        "\n                "
+                    )
+                  ]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex-1" }, [
+            _c(
+              "p",
+              {
+                staticClass: "text-blue text-right leading-none cursor-pointer",
+                attrs: { title: "Github stars" },
+                on: {
+                  click: function($event) {
+                    _vm.__open(_vm.repository.github_url)
+                  }
+                }
+              },
+              [
+                _c("i", {
+                  staticClass: "fab fa-github",
+                  staticStyle: { "font-size": "1.5em" }
+                }),
+                _vm._v(
+                  " " +
+                    _vm._s(_vm.__formatNumber(_vm.repository.github_stars)) +
+                    "\n                "
+                )
+              ]
             )
-          })
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex items-center" }, [
-        _c("div", { staticClass: "flex-1" }, [
-          _c(
-            "p",
-            {
-              staticClass: "text-blue leading-none cursor-pointer",
-              on: {
-                click: function($event) {
-                  _vm.__open(_vm.repository.packagist_url)
-                }
-              }
-            },
-            [
-              _c("i", {
-                staticClass: "fas fa-download",
-                staticStyle: { "font-size": "1.5em" }
-              }),
-              _vm._v(
-                " " +
-                  _vm._s(_vm.__formatNumber(_vm.repository.downloads.total)) +
-                  "\n            "
-              )
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex-1" }, [
-          _c(
-            "p",
-            {
-              staticClass: "text-blue text-right leading-none cursor-pointer",
-              on: {
-                click: function($event) {
-                  _vm.__open(_vm.repository.github_url)
-                }
-              }
-            },
-            [
-              _c("i", {
-                staticClass: "fab fa-github",
-                staticStyle: { "font-size": "1.5em" }
-              }),
-              _vm._v(
-                " " +
-                  _vm._s(_vm.__formatNumber(_vm.repository.github_stars)) +
-                  "\n            "
-              )
-            ]
-          )
+          ])
         ])
-      ])
-    ]
-  )
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -47926,7 +47942,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return number.toLocaleString();
         },
         __keywords: function __keywords(repository) {
-            return repository.versions['dev-master'].keywords;
+            return repository.keywords;
         },
         __addToFilter: function __addToFilter(text) {
             this.$store.commit('homeAddToFilter', text);
@@ -48063,7 +48079,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return number.toLocaleString();
         },
         __keywords: function __keywords(repository) {
-            return repository.versions['dev-master'].keywords;
+            return repository.keywords;
         },
         __clearFilter: function __clearFilter() {
             return this.$store.commit('homeSetFilterPackages', '');

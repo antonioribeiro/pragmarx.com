@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="text-center text-5xl text-red-dark mb-8 font-black">
-            We Make Laravel & PHP Packages
+            We Forge Laravel Apps & PHP Packages
 
             <span v-if="_updating">
                 <i class="text-blue-dark fas fa-cog fa-spin text-lg"></i>
@@ -12,17 +12,17 @@
         <div class="flex mb-4 mt-4 justify-center">
             <div class="flex-1 h-12"></div>
             <div class="flex justify-center bg-blue-dark">
-                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8">
+                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8" title="Repositories">
                     <p class="mb-4"><i class="fas fa-database fa-2x"></i></p>
                     <p>{{ _count }}</p>
                 </div>
 
-                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8">
+                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8" title="Downloads">
                     <p class="mb-4"><i class="fas fa-download fa-2x"></i></p>
                     <p>{{ _downloads }}</p>
                 </div>
 
-                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8">
+                <div class="text-white text-center px-2 py-2 mt-4 mb-4 mr-8 ml-8" title="Github stars">
                     <p class="mb-4"><i class="fab fa-github fa-2x"></i></p>
                     <p>{{ _stars }}</p>
                 </div>
@@ -38,16 +38,8 @@
             </div>
         </div>
 
-        <div class="flex">
-            <div class="w-1/6 p-2"></div>
-
-            <div class="w-auto p-2">
-                <div class="flex flex-wrap">
-                    <package-card v-for="repository in _repositories" :key="repository.name" :repository="repository"></package-card>
-                </div>
-            </div>
-
-            <div class="w-1/6 p-2"></div>
+        <div class="flex flex-wrap">
+            <package-card v-for="repository in _repositories" :key="repository.name" :repository="repository"></package-card>
         </div>
     </div>
 </template>
@@ -57,7 +49,7 @@
 
     export default {
         mounted() {
-            console.log('Component mounted.')
+            setInterval(() => { this.__forceUpdate() }, 1000 * 30);
         },
 
         computed: {
@@ -89,5 +81,11 @@
                 return Object.keys(this._repositories).length
             },
         },
+
+        methods: {
+            __forceUpdate() {
+                return this.$store.dispatch('homeLoadPackages', true);
+            },
+        }
     }
 </script>
