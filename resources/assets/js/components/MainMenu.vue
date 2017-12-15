@@ -2,9 +2,11 @@
     <div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
-                <router-link to="/firewall">
+                <a href="/firewall">
                     Firewall Test Page
-                </router-link>
+                </a>
+
+                <span class="m-2 bold text-white">|</span>
                 <!--class="{{ request()->is('firewall') ? 'active' : '' }} block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"-->
 
                 <router-link to="/google2fa">
