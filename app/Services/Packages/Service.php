@@ -98,7 +98,7 @@ class Service
                 ->merge($this->gitHub->getPackagesFromGitHub())
                 ->sortBy(
                     function ($package) {
-                        return -coollect($package)->downloads->total;
+                        return - (coollect($package)->downloads->total * coollect($package)->github_stars);
                     }
                 );
         });

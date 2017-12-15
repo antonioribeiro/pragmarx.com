@@ -11,7 +11,7 @@
                             {{ repository.title }}
                         </span>
 
-                        <span class="text-xs text-grey">
+                        <span class="text-xs text-grey font-hairline">
                             {{ repository.version }}
                         </span>
                     </div>
@@ -20,7 +20,9 @@
                         class="flex-1 text-sm text-grey-dark text-right cursor-pointer"
                         @click="__open(repository.github_only ? repository.github_url : repository.packagist_url)"
                     >
-                        {{ repository.name }}
+                        <span class="text-xs text-black font-hairline">
+                            {{ repository.name }}
+                        </span>
                     </p>
                 </div>
 
@@ -41,6 +43,16 @@
                         title="Downloads"
                     >
                         <i class="fas fa-download" style="font-size: 1.5em;"></i> {{ __formatNumber(repository.downloads.total) }}
+                    </p>
+                </div>
+
+                <div v-if="repository.website" class="flex-1">
+                    <p
+                        class="text-red leading-none cursor-pointer"
+                        @click="__open(repository.website)"
+                        title="Website"
+                    >
+                        <i class="fab fa-internet-explorer" style="font-size: 1.5em;"></i>
                     </p>
                 </div>
 

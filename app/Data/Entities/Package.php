@@ -41,11 +41,13 @@ class Package
             'antonioribeiro/pragmarx.com' => [
                 'github_only' => true,
                 'title' => 'pragmarx.com',
+                'website' => 'https://pragmarx.com',
             ],
 
             'antonioribeiro/acr.com' => [
                 'github_only' => true,
                 'title' => 'antoniocarlosribeiro.com',
+                'website' => 'https://antoniocarlosribeiro.com',
             ],
 
             'antonioribeiro/dev-box' => [

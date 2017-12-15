@@ -16,26 +16,40 @@ const getters = {
     homeGetFilteredRepositories(state) {
         const repositories = state.packages;
 
+        if (state.filterPackages === '') {
+            return repositories;
+        }
+
         let result = []
+
+        const words = state.filterPackages.split(' ')
 
         for (let key in repositories) {
             if (repositories.hasOwnProperty(key)) {
-                const repository = repositories[key]
+                let found = true
 
-                const s1 = repository.name.search(new RegExp(state.filterPackages, "i")) !== -1
+                for (const wordKey in words) {
+                    const repository = repositories[key]
 
-                const s2 = repository.description.search(new RegExp(state.filterPackages, "i")) !== -1
+                    const s1 = repository.name.search(new RegExp(words[wordKey], "i")) !== -1
 
-                const s3 = repository.keywords.filter(function(keyword) {
-                    return keyword.search(new RegExp(state.filterPackages, "i")) !== -1
-                }).length > 0
+                    const s2 = repository.description.search(new RegExp(words[wordKey], "i")) !== -1
 
-                if (s1 || s2 || s3) {
-                    result.push(repository)
+                    const s3 = repository.keywords.filter(function(keyword) {
+                        return keyword.search(new RegExp(words[wordKey], "i")) !== -1
+                    }).length > 0
+
+                    console.log('found = found || s1 || s2 || s3', found , s1 , s2 , s3, words[wordKey]);
+
+                    found = found && (s1 || s2 || s3)
+                }
+
+                if (found) {
+                    result.push(repositories[key])
                 }
             }
         }
-        
+
         return result
     },
 }

@@ -4,21 +4,21 @@
             <div class="text-sm lg:flex-grow content-center">
 
                 <div class="flex content-center">
-                    <div class="text-center p-2">
-                        <router-link to="/google2fa">
-                            Google2FA Test Page
-                        </router-link>
-                    </div>
+                    <!--<div class="text-center p-2">-->
+                        <!--<router-link to="/google2fa">-->
+                            <!--Google2FA Test Page-->
+                        <!--</router-link>-->
+                    <!--</div>-->
 
-                    <div class="w-1/3 p-2">
-                        <div class="text-grey-darker text-center bg-grey-light p-2">1</div>
-                    </div>
+                    <!--<div class="w-1/3 p-2">-->
+                        <!--<div class="text-grey-darker text-center bg-grey-light p-2">1</div>-->
+                    <!--</div>-->
 
-                    <span class="m-2 bold text-white">|</span>
+                    <!--<span class="m-2 bold text-white">|</span>-->
 
-                    <a href="https://github.com/antonioribeiro">
-                        <i class="fab fa-github fa-3x"></i>
-                    </a>
+                    <!--<a href="https://github.com/antonioribeiro">-->
+                        <!--<i class="fab fa-github fa-3x"></i>-->
+                    <!--</a>-->
 
                     <!--<router-link to="/firewall">-->
                     <!--Firewall Test Page-->
@@ -32,13 +32,13 @@
 
             </div>
 
-            <a
-                v-if="_laravel.user"
-                href="/google2fa/middleware/logout"
-                class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0"
-            >
-                <!--{{ $user->name }} ({{ $user->email }}) - logout-->
-            </a>
+            <!--<a-->
+                <!--v-if="_laravel.user"-->
+                <!--href="/google2fa/middleware/logout"-->
+                <!--class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0"-->
+            <!--&gt;-->
+                <!--&lt;!&ndash;{{ $user->name }} ({{ $user->email }}) - logout&ndash;&gt;-->
+            <!--</a>-->
         </div>
     </div>
 </template>
