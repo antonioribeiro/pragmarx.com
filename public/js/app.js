@@ -41513,7 +41513,7 @@ var render = function() {
           "div",
           { staticClass: "text-sm lg:flex-grow" },
           [
-            _c("a", { attrs: { href: "/firewall" } }, [
+            _c("router-link", { attrs: { to: "/firewall" } }, [
               _vm._v("\n                Firewall Test Page\n            ")
             ]),
             _vm._v(" "),
@@ -48305,9 +48305,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    firewall\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("iframe", { attrs: { src: "/firewall", frameborder: "0" } })
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

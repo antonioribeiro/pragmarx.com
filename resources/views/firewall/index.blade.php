@@ -1,4 +1,4 @@
-@extends('templates.main')
+@extends('templates.headless')
 
 @section('content')
     <h1><a href="https://github.com/antonioribeiro/firewall">Firewall Package</a></h1>
