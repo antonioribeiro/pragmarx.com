@@ -53,7 +53,11 @@
 
     export default {
         mounted() {
-            setInterval(() => { this.__forceUpdate() }, 1000 * 30);
+            const timeout = 1000 * 60 * 10
+
+            setTimeout(() => {
+                setInterval(() => { this.__forceUpdate() }, timeout)
+            }, timeout)
         },
 
         computed: {

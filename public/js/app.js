@@ -48043,9 +48043,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     mounted: function mounted() {
         var _this = this;
 
-        setInterval(function () {
-            _this.__forceUpdate();
-        }, 1000 * 30);
+        var timeout = 1000 * 60 * 10;
+
+        setTimeout(function () {
+            setInterval(function () {
+                _this.__forceUpdate();
+            }, timeout);
+        }, timeout);
     },
 
 
