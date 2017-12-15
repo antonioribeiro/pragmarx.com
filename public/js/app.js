@@ -41473,6 +41473,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     computed: {
@@ -41509,22 +41526,28 @@ var render = function() {
         staticClass: "w-full block flex-grow lg:flex lg:items-center lg:w-auto"
       },
       [
-        _c(
-          "div",
-          { staticClass: "text-sm lg:flex-grow" },
-          [
-            _c("router-link", { attrs: { to: "/firewall" } }, [
-              _vm._v("\n                Firewall Test Page\n            ")
-            ]),
+        _c("div", { staticClass: "text-sm lg:flex-grow content-center" }, [
+          _c("div", { staticClass: "flex content-center" }, [
+            _c(
+              "div",
+              { staticClass: "text-center p-2" },
+              [
+                _c("router-link", { attrs: { to: "/google2fa" } }, [
+                  _vm._v(
+                    "\n                        Google2FA Test Page\n                    "
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(0),
             _vm._v(" "),
             _c("span", { staticClass: "m-2 bold text-white" }, [_vm._v("|")]),
             _vm._v(" "),
-            _c("router-link", { attrs: { to: "/google2fa" } }, [
-              _vm._v("\n                Google2FA Test Page\n            ")
-            ])
-          ],
-          1
-        ),
+            _vm._m(1)
+          ])
+        ]),
         _vm._v(" "),
         _vm._laravel.user
           ? _c("a", {
@@ -41537,7 +41560,28 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-1/3 p-2" }, [
+      _c(
+        "div",
+        { staticClass: "text-grey-darker text-center bg-grey-light p-2" },
+        [_vm._v("1")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "https://github.com/antonioribeiro" } }, [
+      _c("i", { staticClass: "fab fa-github fa-3x" })
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -48285,6 +48329,20 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -48305,18 +48363,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "flex flex-col" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-red-dark mb-8 font-black"
+      },
+      [
+        _vm._updating
+          ? _c("span", [
+              _c("i", {
+                staticClass: "text-blue-dark fas fa-cog fa-spin text-lg"
+              })
+            ])
+          : _vm._e(),
+        _vm._v("\n\n        We Forge Laravel Apps & PHP Packages\n\n        "),
+        _vm._updating
+          ? _c("span", [
+              _c("i", {
+                staticClass: "text-blue-dark fas fa-cog fa-spin text-lg"
+              })
+            ])
+          : _vm._e()
+      ]
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("iframe", { attrs: { src: "/firewall", frameborder: "0" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

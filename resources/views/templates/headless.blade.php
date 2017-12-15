@@ -6,7 +6,7 @@
     </head>
 
     <body class="bg-grey-light">
-        firewall in frame
+        @yield('page-contents')
 
         @include('templates.partials.livereload')
         @include('templates.partials.analytics')

@@ -34,7 +34,7 @@
                 <main-menu></main-menu>
             </nav>
 
-            <div class="mt-6">
+            <div class="mt-6 h-full">
                 <router-view></router-view>
             </div>
         </div>
