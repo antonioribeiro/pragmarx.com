@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use Psr\Http\Message\StreamInterface;
 use PragmaRX\Coollection\Package\Coollection;
 use App\Services\GitHub\Service as GitHubService;
+use function Sodium\version_string;
 
 class Service
 {
@@ -36,18 +37,26 @@ class Service
 
         $package['keywords'] = $package['versions']['dev-master']['keywords'];
 
+        $package['version'] = collect($package['versions'])->keys()->filter(function($version) {
+            return starts_with($version, 'v');
+        })->values()->sortBy(function($a) {
+            return -$this->makeSortableVersion($a);
+        })->first();
+
         unset($package['versions']);
 
         return $package;
     }
 
-    private function excludablePackages()
+    public function makeSortableVersion($a)
     {
-        return coollect([
-            'pragmarx/googleforms',
-            'pragmarx/ua-parser',
-            'pragmarx/ci',
-        ]);
+        preg_match('/v(\d)\.(\d)\.(\d)/', $a, $matches);
+
+        if (count($matches) == 4) {
+            return ((int) $matches[1])*1000 + ((int) $matches[2])*100 + ((int) $matches[3])*10;
+        }
+
+        return null;
     }
 
     /**
@@ -83,20 +92,6 @@ class Service
         return coollect(
             $this->httpGet(static::PACKAGES_URL)->packageNames
         );
-    }
-
-    protected function makePackageInfoFromGithubPackage($package)
-    {
-        return [
-            'name' => $package->full_name,
-            'description' => $package->description,
-            'downloads' => [
-                'total' => -1,
-                'monthly' => -1,
-                'daily' => -1,
-            ],
-            'keywords' => $package->topics,
-        ];
     }
 
     /**
