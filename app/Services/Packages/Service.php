@@ -85,6 +85,8 @@ class Service
                         $this->gitHub->getPackageFromGitHub($this->gitHub->extractPackageName($info->repository))
                     );
 
+                    $info = $this->normalizeKeywords($info);
+
                     if (!isset($info['title'])) {
                         $info['title'] = $this->makePackageTitle($info);
                     }
@@ -100,6 +102,28 @@ class Service
                     }
                 );
         });
+    }
+
+
+    /**
+     * @param $info
+     * @return mixed
+     */
+    function normalizeKeywords($info)
+    {
+        $info['keywords'] = coollect($info['keywords'])
+            ->push($info['github_only'] === true
+                ? 'repository'
+                : 'package')
+            ->map(function ($keyword) {
+                return strtolower($keyword);
+            })
+            ->values()
+            ->sort()
+            ->values()
+        ;
+
+        return $info;
     }
 
     public function purgeCache()
