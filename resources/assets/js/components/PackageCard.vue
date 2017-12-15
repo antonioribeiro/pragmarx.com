@@ -4,10 +4,16 @@
             <div class="mb-2">
                 <div class="flex mb-4">
                     <div
-                        class="flex-1 text-black font-bold text-xl cursor-pointer"
+                        class="flex-1 font-bold text-xl cursor-pointer"
                         @click="__open(repository.github_url)"
                     >
-                        {{ repository.title }}
+                        <span class="text-black">
+                            {{ repository.title }}
+                        </span>
+
+                        <span class="text-xs text-grey">
+                            {{ repository.version }}
+                        </span>
                     </div>
 
                     <p
