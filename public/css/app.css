@@ -4623,6 +4623,16 @@ button,
   z-index: auto;
 }
 
+.label {
+  padding: 3px 4px 3px 4px;
+  font-weight: 100;
+  font-size: 0.7rem;
+  font-family: "Arial", Arial, sans-serif;
+  display: inline;
+  margin: 1px;
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -8590,6 +8600,16 @@ button,
 
   .sm\:z-auto {
     z-index: auto;
+  }
+
+  .sm\:label {
+    padding: 3px 4px 3px 4px;
+    font-weight: 100;
+    font-size: 0.7rem;
+    font-family: "Arial", Arial, sans-serif;
+    display: inline;
+    margin: 1px;
+    text-align: center;
   }
 }
 
@@ -12561,6 +12581,16 @@ button,
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:label {
+    padding: 3px 4px 3px 4px;
+    font-weight: 100;
+    font-size: 0.7rem;
+    font-family: "Arial", Arial, sans-serif;
+    display: inline;
+    margin: 1px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -16531,6 +16561,16 @@ button,
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:label {
+    padding: 3px 4px 3px 4px;
+    font-weight: 100;
+    font-size: 0.7rem;
+    font-family: "Arial", Arial, sans-serif;
+    display: inline;
+    margin: 1px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -20500,5 +20540,15 @@ button,
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:label {
+    padding: 3px 4px 3px 4px;
+    font-weight: 100;
+    font-size: 0.7rem;
+    font-family: "Arial", Arial, sans-serif;
+    display: inline;
+    margin: 1px;
+    text-align: center;
   }
 }

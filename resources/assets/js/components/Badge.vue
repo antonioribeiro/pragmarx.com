@@ -1,6 +1,7 @@
 <template>
     <button
-        class="bg-blue hover:bg-blue-light text-white font-hairline text-xs hover:text-white py-1 px-2 border border-blue-dark hover:border-blue-darker rounded-full mr-2"
+        classx="bg-blue hover:bg-blue-light text-white font-hairline text-xs hover:text-white py-1 px-2 border border-blue-dark hover:border-blue-darker rounded-full mr-2"
+        class="label bg-yellow-dark text-black hover:bg-yellow-light cursor-pointer"
         @click="__addToFilter(text)"
     >
         {{ text.toLowerCase() }}
