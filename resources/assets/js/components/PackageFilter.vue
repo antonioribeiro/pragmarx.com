@@ -38,7 +38,7 @@
 
         methods: {
             __formatNumber(number) {
-                return number.toLocaleString();
+                return number.toLocaleString()
             },
 
             __keywords(repository) {

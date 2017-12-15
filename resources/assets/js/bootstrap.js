@@ -2,7 +2,7 @@
  * Bootstrap
  */
 
-window._ = require('lodash');
+window._ = require('lodash')
 
 /**
  * Vue
@@ -33,5 +33,5 @@ window.axios = require("axios")
  */
 let token = document.head.querySelector('meta[name="csrf-token"]')
 
-window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'

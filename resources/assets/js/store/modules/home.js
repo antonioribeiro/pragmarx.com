@@ -14,10 +14,10 @@ const state = {
 
 const getters = {
     homeGetFilteredRepositories(state) {
-        const repositories = state.packages;
+        const repositories = state.packages
 
         if (state.filterPackages === '') {
-            return repositories;
+            return repositories
         }
 
         let result = []
@@ -38,8 +38,6 @@ const getters = {
                     const s3 = repository.keywords.filter(function(keyword) {
                         return keyword.search(new RegExp(words[wordKey], "i")) !== -1
                     }).length > 0
-
-                    console.log('found = found || s1 || s2 || s3', found , s1 , s2 , s3, words[wordKey]);
 
                     found = found && (s1 || s2 || s3)
                 }

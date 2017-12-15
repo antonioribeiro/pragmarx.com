@@ -16,9 +16,9 @@
 
                     <!--<span class="m-2 bold text-white">|</span>-->
 
-                    <!--<a href="https://github.com/antonioribeiro">-->
-                        <!--<i class="fab fa-github fa-3x"></i>-->
-                    <!--</a>-->
+                    <a href="https://github.com/antonioribeiro">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
 
                     <!--<router-link to="/firewall">-->
                     <!--Firewall Test Page-->
@@ -47,7 +47,7 @@
     export default {
         computed: {
             _laravel() {
-                return window.Laravel;
+                return window.Laravel
             },
         },
 

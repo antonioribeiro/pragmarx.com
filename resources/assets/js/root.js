@@ -16,7 +16,7 @@ if (document.getElementById('vue-root')) {
 
         mounted() {
             // this.$store.commit("rootSetMounted", true)
-            console.log('vue-root mounted');
+            // console.log('vue-root mounted')
         },
     })
 } else {

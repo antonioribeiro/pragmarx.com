@@ -92,7 +92,7 @@
 
         methods: {
             __forceUpdate() {
-                return this.$store.dispatch('homeLoadPackages', true);
+                return this.$store.dispatch('homeLoadPackages', true)
             },
         }
     }

@@ -79,7 +79,7 @@
 
         methods: {
             __formatNumber(number) {
-                return number.toLocaleString();
+                return number.toLocaleString()
             },
 
             __keywords(repository) {
@@ -87,7 +87,7 @@
             },
 
             __open(url) {
-                window.open(url, '_blank');
+                window.open(url, '_blank')
             }
         },
     }

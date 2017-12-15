@@ -17,7 +17,7 @@
 
         methods: {
             __formatNumber(number) {
-                return number.toLocaleString();
+                return number.toLocaleString()
             },
 
             __keywords(repository) {
@@ -25,7 +25,7 @@
             },
 
             __addToFilter(text) {
-                this.$store.commit('homeAddToFilter', text);
+                this.$store.commit('homeAddToFilter', text)
             },
         },
     }

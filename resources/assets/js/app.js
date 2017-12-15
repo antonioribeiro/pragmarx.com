@@ -2,8 +2,8 @@ require("./bootstrap.js")
 
 require("./components/_bootstrap.js")
 
-require('./fonts');
+require('./fonts')
 
-require('./google2fa');
+require('./google2fa')
 
 require("./root.js")

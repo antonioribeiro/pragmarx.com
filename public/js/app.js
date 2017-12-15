@@ -41486,7 +41486,13 @@ var staticRenderFns = [
         },
         [
           _c("div", { staticClass: "text-sm lg:flex-grow content-center" }, [
-            _c("div", { staticClass: "flex content-center" })
+            _c("div", { staticClass: "flex content-center" }, [
+              _c(
+                "a",
+                { attrs: { href: "https://github.com/antonioribeiro" } },
+                [_c("i", { staticClass: "fab fa-github fa-3x" })]
+              )
+            ])
           ])
         ]
       )
@@ -42366,7 +42372,7 @@ if (document.getElementById('vue-root')) {
 
         mounted: function mounted() {
             // this.$store.commit("rootSetMounted", true)
-            console.log('vue-root mounted');
+            // console.log('vue-root mounted')
         }
     });
 } else {
@@ -44183,8 +44189,6 @@ var getters = {
                     var s3 = repository.keywords.filter(function (keyword) {
                         return keyword.search(new RegExp(words[wordKey], "i")) !== -1;
                     }).length > 0;
-
-                    console.log('found = found || s1 || s2 || s3', found, s1, s2, s3, words[wordKey]);
 
                     found = found && (s1 || s2 || s3);
                 };
