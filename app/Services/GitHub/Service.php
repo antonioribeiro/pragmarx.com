@@ -47,11 +47,20 @@ class Service
      */
     public function repository($name)
     {
-        list($vendor, $name) = explode('/', $name);
+        try {
+            list($vendor, $name) = explode('/', $name);
 
-        return coollect(
-            Github::repo()->show($vendor, $name, [], ['Accept' => 'application/vnd.github.mercy-preview+json'])
-        );
+            return coollect(
+                Github::repo()->show($vendor, $name, [], ['Accept' => 'application/vnd.github.mercy-preview+json'])
+            );
+        } catch (\Exception $exception) {
+            return coollect([
+                'name' => $name,
+                'error' => true,
+                'error_message' => $exception->getMessage(),
+                'exception' => $exception
+            ]);
+        }
     }
 
     /**
@@ -60,6 +69,10 @@ class Service
      */
     protected function makePackageInfoFromGithubPackage($package)
     {
+        if (isset($package['error'])) {
+            return $package;
+        }
+
         return coollect([
             'name' => $package->full_name,
             'description' => $package->description,
@@ -77,10 +90,14 @@ class Service
     /**
      * @return Coollection
      */
-    public function getPackagesFromGitHub()
+    public function getPackagesFromGitHub($vendor)
     {
-        return Package::fromGitHub()->map(function($package, $key) {
-            return $package->merge($this->getPackageFromGitHub($key));
+        if ($vendor !== 'pragmarx') {
+            return coollect();
+        }
+
+        return Package::fromGitHub()->map(function($package, $key) use ($vendor) {
+            return $package->merge($this->getPackageFromGitHub($key, $vendor));
         });
     }
 

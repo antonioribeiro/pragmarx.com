@@ -56,7 +56,9 @@ class Service
 
         $info = $github->merge($packagist);
 
-        $info['keywords'] = $packagist->keywords->merge($github->keywords->toArray())->unique()->values();
+        if ($github->count() > 0 and isset($github['keywords'])) {
+            $info['keywords'] = $info->keywords->merge($github->keywords->toArray())->unique()->values();
+        }
 
         return $info;
     }
@@ -67,22 +69,27 @@ class Service
     }
 
     /**
+     * Load all packages for a vendor.
+     *
+     * @param string|null $vendor
      * @return Coollection
      */
-    public function packages()
+    public function packages($vendor = null)
     {
-        return Cache::remember(Constants::CACHE_PACKAGES_KEY, Constants::CACHE_PACKAGES_TIME, function() {
+        $vendor = is_null($vendor) ? 'pragmarx' : $vendor;
+
+        return Cache::remember(Constants::CACHE_PACKAGES_KEY."-$vendor", Constants::CACHE_PACKAGES_TIME, function() use ($vendor) {
             return $this
-                ->packagist->getPackagesFromPackagist()
+                ->packagist->getPackagesFromPackagist($vendor)
                 ->filter(function($package) {
                     return ! $this->excludablePackages()->contains($package);
                 })
-                ->mapWithKeys(function($package) {
+                ->mapWithKeys(function($package) use ($vendor) {
                     $info = $this->packagist->getPackageInfoFromPackagist($package);
 
                     $info = $this->mergeInfo(
                         $info,
-                        $this->gitHub->getPackageFromGitHub($this->gitHub->extractPackageName($info->repository))
+                        $this->gitHub->getPackageFromGitHub($this->gitHub->extractPackageName($info->repository), $vendor)
                     );
 
                     $info = $this->normalizeKeywords($info);
@@ -95,12 +102,13 @@ class Service
                         $package => $info
                     ];
                 })
-                ->merge($this->gitHub->getPackagesFromGitHub())
-                ->sortBy(
-                    function ($package) {
-                        return - (coollect($package)->downloads->total * coollect($package)->github_stars);
-                    }
-                );
+                ->merge($this->gitHub->getPackagesFromGitHub($vendor))
+                ->reject(function ($package) {
+                    return isset($package['error']);
+                })
+                ->sortBy(function ($package) {
+                    return - (coollect($package)->downloads->total * coollect($package)->github_stars);
+                });
         });
     }
 

@@ -50,17 +50,5 @@
                 return window.Laravel
             },
         },
-
-        methods: {
-            __loadPackages() {
-                this.$store.dispatch('homeLoadPackages')
-            },
-        },
-
-        mounted() {
-            console.log('Component mounted.')
-
-            this.__loadPackages()
-        }
     }
 </script>

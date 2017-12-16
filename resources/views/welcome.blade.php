@@ -12,8 +12,8 @@
 
         <div class="w-auto p-2">
             <div class="flex flex-wrap">
-                @foreach($packages as $package)
-                    @include('home.partials.package-card', $package)
+                @foreach($repositories as $repository)
+                    @include('home.partials.repository-card', $repository)
                 @endforeach
             </div>
         </div>

@@ -17,7 +17,7 @@ Route::get('/carbon', function () {
 });
 
 Route::group(['prefix' => 'api/v1'], function () {
-    Route::get('/packages', 'Packages@all');
+    Route::get('/repositories/{vendor?}', 'Packages@all');
 });
 
 require base_path('routes/firewall.php');

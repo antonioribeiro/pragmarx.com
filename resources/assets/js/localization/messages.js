@@ -9,7 +9,7 @@ export default {
         messages: {
             about: {
                 title: "About",
-                verb: "Home24 Frontend Challenge",
+                verb: "pragmarx Frontend Challenge",
                 text_p1:
                     "Create a single-page web application that takes an artist from the user and returns details about the artist and their events. The aim of the code challenge is to be able to understand the decisions made in building a web application. Focus on the requirements first and if you have extra time feel free to add bonus features. In the end we will review your submission in terms of its readability, architecture and creativity. Good Luck!",
                 text_p2: "",
@@ -50,7 +50,7 @@ export default {
         messages: {
             about: {
                 title: "Sobre",
-                verb: "Home24 Frontend Challenge",
+                verb: "pragmarx Frontend Challenge",
                 text_p1:
                     "Create a single-page web application that takes an artist from the user and returns details about the artist and their events. The aim of the code challenge is to be able to understand the decisions made in building a web application. Focus on the requirements first and if you have extra time feel free to add bonus features. In the end we will review your submission in terms of its readability, architecture and creativity. Good Luck!",
                 text_p2: "",
@@ -91,7 +91,7 @@ export default {
         messages: {
             about: {
                 title: "À propos",
-                verb: "Home24 Frontend Challenge",
+                verb: "pragmarx Frontend Challenge",
                 text_p1:
                     "Create a single-page web application that takes an artist from the user and returns details about the artist and their events. The aim of the code challenge is to be able to understand the decisions made in building a web application. Focus on the requirements first and if you have extra time feel free to add bonus features. In the end we will review your submission in terms of its readability, architecture and creativity. Good Luck!",
                 text_p2: "",

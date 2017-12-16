@@ -2,15 +2,15 @@
 
 namespace App\Services\Packagist;
 
+use Github\Exception\RuntimeException;
 use GuzzleHttp\Client;
 use Psr\Http\Message\StreamInterface;
 use PragmaRX\Coollection\Package\Coollection;
 use App\Services\GitHub\Service as GitHubService;
-use function Sodium\version_string;
 
 class Service
 {
-    const PACKAGES_URL = 'https://packagist.org/packages/list.json?vendor=pragmarx';
+    const PACKAGES_URL = 'https://packagist.org/packages/list.json?vendor=';
 
     const PACKAGE_URL = 'https://packagist.org/packages/[vendor/package].json';
 
@@ -48,6 +48,15 @@ class Service
         return $package;
     }
 
+    /**
+     * @param string $vendor
+     * @return string
+     */
+    protected function makeListPackagesUrl($vendor)
+    {
+        return static::PACKAGES_URL.$vendor;
+    }
+
     public function makeSortableVersion($a)
     {
         preg_match('/v(\d)\.(\d)\.(\d)/', $a, $matches);
@@ -77,20 +86,30 @@ class Service
      */
     public function httpGet($url)
     {
-        $this->response = $this->httpClient()->request('GET', $url);;
+        try {
+            $this->response = $this->httpClient()->request('GET', $url);;
 
-        return $this->response->getStatusCode() === 200
-            ? $this->responseToCollection($this->response->getBody())
-            : null;
+            return $this->response->getStatusCode() === 200
+                ? $this->responseToCollection($this->response->getBody())
+                : null;
+        } catch (\Exception $exception) {
+            return coollect([
+                'url' => $url,
+                'error' => true,
+                'error_message' => $exception->getMessage(),
+                'exception' => $exception
+            ]);
+        }
     }
 
     /**
+     * @param string $vendor
      * @return Coollection
      */
-    public function getPackagesFromPackagist()
+    public function getPackagesFromPackagist($vendor)
     {
         return coollect(
-            $this->httpGet(static::PACKAGES_URL)->packageNames
+            $this->httpGet($this->makeListPackagesUrl($vendor))->packageNames
         );
     }
 

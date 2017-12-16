@@ -17,14 +17,12 @@ class Packages extends Controller
         $this->packages = $packages;
     }
 
-    public function all(Request $request)
+    public function all($vendor = null, Request $request)
     {
         if ($request->get('force')) {
             $this->packages->purgeCache();
         }
 
-        return [
-            'packages' => $this->packages->packages()->toArray(),
-        ];
+        return $this->packages->packages($vendor)->toArray();
     }
 }

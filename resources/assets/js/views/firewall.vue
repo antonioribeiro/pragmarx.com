@@ -5,7 +5,7 @@
                 <i class="text-blue-dark fas fa-cog fa-spin text-lg"></i>
             </span>
 
-            We Forge Laravel Apps & PHP Packages
+            We Forge Laravel Apps & PHP Repositories
 
             <span v-if="_updating">
                 <i class="text-blue-dark fas fa-cog fa-spin text-lg"></i>

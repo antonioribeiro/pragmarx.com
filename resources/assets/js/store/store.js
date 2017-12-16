@@ -34,7 +34,7 @@ const state = {
 
     i18n: VueI18NLocalizationModule,
 
-    brand: "Home24",
+    brand: "PragmaRX",
 }
 
 /**

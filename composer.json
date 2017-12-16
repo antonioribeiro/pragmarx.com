@@ -20,6 +20,7 @@
         "graham-campbell/github": "^6.1",
         "guzzlehttp/guzzle": "^6.2",
         "hisamu/php-xbase": "^1.0",
+        "knplabs/github-api": "dev-master#29f8032fcecedfc15b6cadfa93fc606f4e8657ec",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
@@ -32,8 +33,8 @@
         "pragmarx/random": "^0.2.0",
         "pragmarx/tddd": "dev-master",
         "pragmarx/tracker": "dev-master",
-        "predis/predis": "^1.0",
-        "knplabs/github-api": "dev-master#29f8032fcecedfc15b6cadfa93fc606f4e8657ec"
+        "pragmarx/version": "^0.2.1",
+        "predis/predis": "^1.0"
     },
 
     "require-dev": {

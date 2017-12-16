@@ -50,11 +50,11 @@ class BrowserStorage {
     }
 
     getKey(item) {
-        return "home24." + this.getAppId() + "." + item
+        return "pragmarx." + this.getAppId() + "." + item
     }
 
     getAppId() {
-        return "some app id here"
+        return "2208aec5-1e34-4634-bbd1-b97e108d3a7b"
     }
 }
 
