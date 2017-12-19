@@ -20,7 +20,7 @@ class Packages extends Controller
     public function all($vendor = null, Request $request)
     {
         if ($request->get('force')) {
-            $this->packages->purgeCache();
+            $this->packages->purgeCache($vendor);
         }
 
         return $this->packages->packages($vendor)->toArray();

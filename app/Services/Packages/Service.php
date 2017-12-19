@@ -43,6 +43,28 @@ class Service
     }
 
     /**
+     * @param $vendor
+     * @return string
+     */
+    protected function getVendor($vendor): string
+    {
+        $vendor = is_null($vendor)
+            ? 'pragmarx'
+            : $vendor;
+
+        return $vendor;
+    }
+
+    /**
+     * @param $vendor
+     * @return string
+     */
+    protected function makeCacheKey($vendor): string
+    {
+        return Constants::CACHE_PACKAGES_KEY . "-$vendor";
+    }
+
+    /**
      * @param Coollection $packagist
      * @param Coollection $github
      * @return Coollection
@@ -76,9 +98,9 @@ class Service
      */
     public function packages($vendor = null)
     {
-        $vendor = is_null($vendor) ? 'pragmarx' : $vendor;
+        $vendor = $this->getVendor($vendor);
 
-        return Cache::remember(Constants::CACHE_PACKAGES_KEY."-$vendor", Constants::CACHE_PACKAGES_TIME, function() use ($vendor) {
+        return Cache::remember($this->makeCacheKey($vendor), Constants::CACHE_PACKAGES_TIME, function() use ($vendor) {
             return $this
                 ->packagist->getPackagesFromPackagist($vendor)
                 ->filter(function($package) {
@@ -134,8 +156,8 @@ class Service
         return $info;
     }
 
-    public function purgeCache()
+    public function purgeCache($vendor)
     {
-        Cache::forget(Constants::CACHE_PACKAGES_KEY);
+        Cache::forget($this->makeCacheKey($vendor));
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Services\Packagist;
 
-use Github\Exception\RuntimeException;
 use GuzzleHttp\Client;
 use Psr\Http\Message\StreamInterface;
 use PragmaRX\Coollection\Package\Coollection;
@@ -35,7 +34,12 @@ class Service
 
         $package['packagist_url'] = str_replace('.json', '', $this->makePackageUrl($package['name']));
 
-        $package['keywords'] = $package['versions']['dev-master']['keywords'];
+        $package['require'] = $package['versions']['dev-master']['require'];
+
+        $package['keywords'] = array_merge(
+            $package['versions']['dev-master']['keywords'],
+            $this->makeRequireKeywords($package['require'])
+        );
 
         $package['version'] = collect($package['versions'])->keys()->filter(function($version) {
             return starts_with($version, 'v');
@@ -55,6 +59,21 @@ class Service
     protected function makeListPackagesUrl($vendor)
     {
         return static::PACKAGES_URL.$vendor;
+    }
+
+    private function makeRequireKeywords($keywords)
+    {
+        $result = [];
+
+        if (isset($keywords['laravel/framework'])) {
+            $result[] = "laravel {$keywords['laravel/framework']}";
+        }
+
+        if (isset($keywords['php'])) {
+            $result[] = "php {$keywords['php']}";
+        }
+
+        return $result;
     }
 
     public function makeSortableVersion($a)
