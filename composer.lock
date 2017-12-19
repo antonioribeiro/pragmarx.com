@@ -3625,24 +3625,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/health.git",
-                "reference": "8b9ef69d92ad3f7057ab5df3b61547911e1a2a94"
+                "reference": "819b5088b5072846d9e2041446afabe993dcbf07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/8b9ef69d92ad3f7057ab5df3b61547911e1a2a94",
-                "reference": "8b9ef69d92ad3f7057ab5df3b61547911e1a2a94",
+                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/819b5088b5072846d9e2041446afabe993dcbf07",
+                "reference": "819b5088b5072846d9e2041446afabe993dcbf07",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": ">=5.3",
-                "php": ">=5.6.0"
+                "laravel/framework": "5.5.*",
+                "php": ">=7.0",
+                "pragmarx/yaml": "^0.1"
             },
             "require-dev": {
                 "docusign/esign-client": "^2.0",
                 "guzzlehttp/guzzle": "~6.0",
                 "laravel/laravel": "^5.3",
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "~5.7",
+                "orchestra/testbench": "~3.5",
+                "phpunit/phpunit": "~6.4",
                 "predis/predis": "^1.0",
                 "symfony/yaml": "~3.2"
             },
@@ -3693,7 +3694,7 @@
                 "pragmarx",
                 "server"
             ],
-            "time": "2017-06-21T16:23:41+00:00"
+            "time": "2017-12-19T01:54:47+00:00"
         },
         {
             "name": "pragmarx/random",

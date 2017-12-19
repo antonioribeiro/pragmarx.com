@@ -4,9 +4,9 @@ regex: '~(?<time_hour>\d{1,2}):(?<time_minute>\d{2})(?::(?<time_second>\d{2}))?\
 checker: PragmaRX\Health\Checkers\ServerLoadChecker
 command: 'uptime 2>&1'
 max_load:
-    load_1: 5
-    load_5: 4
-    load_15: 3
+    load_1: 2
+    load_5: 1.5
+    load_15: 1
 notify: true
 action_message: 'Too much load! (Server Load Checker)'
 error_message: 'Your server might be overloaded, current server load values are "%s, %s and %s", which are above the threshold values: "%s, %s and %s".'
