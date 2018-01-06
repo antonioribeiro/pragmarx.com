@@ -1,4 +1,4 @@
-@extends('templates.main')
+@extends('templates.old')
 
 @section('content')
     <div id="vue-google2fa">

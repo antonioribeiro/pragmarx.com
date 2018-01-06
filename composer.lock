@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.48.0",
+            "version": "3.48.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3"
+                "reference": "e72f243a122f6a46c731450547e5e4d32c4b5d34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
-                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e72f243a122f6a46c731450547e5e4d32c4b5d34",
+                "reference": "e72f243a122f6a46c731450547e5e4d32c4b5d34",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +84,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-15T19:49:31+00:00"
+            "time": "2017-12-22T20:53:25+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -1833,16 +1833,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.26",
+            "version": "v5.5.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28"
+                "reference": "b4fb6eeb227b7327b4ca7f92263b693ec9ac9875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
-                "reference": "d7e6a7aab600c5cfae595ea22074ac3c536cbc28",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b4fb6eeb227b7327b4ca7f92263b693ec9ac9875",
+                "reference": "b4fb6eeb227b7327b4ca7f92263b693ec9ac9875",
                 "shasum": ""
             },
             "require": {
@@ -1963,7 +1963,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-18T14:15:59+00:00"
+            "time": "2017-12-20T15:43:48+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3222,12 +3222,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/coollection.git",
-                "reference": "1364d8f8b66896d1bbd032e9454dedf20741f22d"
+                "reference": "0c2eaea5840034838922497b8cc7a8bef7a7784d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/coollection/zipball/1364d8f8b66896d1bbd032e9454dedf20741f22d",
-                "reference": "1364d8f8b66896d1bbd032e9454dedf20741f22d",
+                "url": "https://api.github.com/repos/antonioribeiro/coollection/zipball/0c2eaea5840034838922497b8cc7a8bef7a7784d",
+                "reference": "0c2eaea5840034838922497b8cc7a8bef7a7784d",
                 "shasum": ""
             },
             "require": {
@@ -3263,6 +3263,7 @@
             },
             "scripts": {
                 "test": [
+                    "@composer install",
                     "vendor/bin/phpunit"
                 ],
                 "check-style": [
@@ -3291,10 +3292,10 @@
                 "pragmarx"
             ],
             "support": {
-                "source": "https://github.com/antonioribeiro/coollection/tree/v0.1.8",
+                "source": "https://github.com/antonioribeiro/coollection/tree/master",
                 "issues": "https://github.com/antonioribeiro/coollection/issues"
             },
-            "time": "2017-12-18T22:22:07+00:00"
+            "time": "2017-12-24T18:57:03+00:00"
         },
         {
             "name": "pragmarx/countries",
@@ -3625,12 +3626,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/health.git",
-                "reference": "819b5088b5072846d9e2041446afabe993dcbf07"
+                "reference": "ef0454f6266e58fe9b6cbe8360e975352a550b04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/819b5088b5072846d9e2041446afabe993dcbf07",
-                "reference": "819b5088b5072846d9e2041446afabe993dcbf07",
+                "url": "https://api.github.com/repos/antonioribeiro/health/zipball/ef0454f6266e58fe9b6cbe8360e975352a550b04",
+                "reference": "ef0454f6266e58fe9b6cbe8360e975352a550b04",
                 "shasum": ""
             },
             "require": {
@@ -3694,7 +3695,7 @@
                 "pragmarx",
                 "server"
             ],
-            "time": "2017-12-19T01:54:47+00:00"
+            "time": "2017-12-24T18:58:27+00:00"
         },
         {
             "name": "pragmarx/random",
@@ -3761,16 +3762,16 @@
         },
         {
             "name": "pragmarx/support",
-            "version": "v0.8.6",
+            "version": "v0.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/support.git",
-                "reference": "ff1e1eeaa32da840a2c374a3f3ce077314129c32"
+                "reference": "70dea5720593f49b9f95c314d20ea93199e4862b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/ff1e1eeaa32da840a2c374a3f3ce077314129c32",
-                "reference": "ff1e1eeaa32da840a2c374a3f3ce077314129c32",
+                "url": "https://api.github.com/repos/antonioribeiro/support/zipball/70dea5720593f49b9f95c314d20ea93199e4862b",
+                "reference": "70dea5720593f49b9f95c314d20ea93199e4862b",
                 "shasum": ""
             },
             "require": {
@@ -3812,7 +3813,7 @@
                 "laravel",
                 "pragmarx"
             ],
-            "time": "2017-11-07T20:42:53+00:00"
+            "time": "2017-12-20T03:15:05+00:00"
         },
         {
             "name": "pragmarx/tddd",
@@ -3820,12 +3821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/tddd.git",
-                "reference": "f1b2674a53e4f78e133b6b3ea4c2928089b79b5c"
+                "reference": "fa7b9b69b8568657b7919784b830aa044a331d49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/tddd/zipball/f1b2674a53e4f78e133b6b3ea4c2928089b79b5c",
-                "reference": "f1b2674a53e4f78e133b6b3ea4c2928089b79b5c",
+                "url": "https://api.github.com/repos/antonioribeiro/tddd/zipball/fa7b9b69b8568657b7919784b830aa044a331d49",
+                "reference": "fa7b9b69b8568657b7919784b830aa044a331d49",
                 "shasum": ""
             },
             "require": {
@@ -3894,7 +3895,7 @@
                 "testing",
                 "watcher"
             ],
-            "time": "2017-12-09T01:57:22+00:00"
+            "time": "2017-12-20T03:34:45+00:00"
         },
         {
             "name": "pragmarx/tracker",
@@ -4038,12 +4039,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/yaml.git",
-                "reference": "97e35ccf86cb216352d6aa4564d2d56ef5fc85f5"
+                "reference": "cc27a84e8d9760d82014596ef155c34c816c4ea5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/yaml/zipball/97e35ccf86cb216352d6aa4564d2d56ef5fc85f5",
-                "reference": "97e35ccf86cb216352d6aa4564d2d56ef5fc85f5",
+                "url": "https://api.github.com/repos/antonioribeiro/yaml/zipball/cc27a84e8d9760d82014596ef155c34c816c4ea5",
+                "reference": "cc27a84e8d9760d82014596ef155c34c816c4ea5",
                 "shasum": ""
             },
             "require": {
@@ -4587,37 +4588,43 @@
         },
         {
             "name": "react/cache",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
-                "reference": "558f614891341b1d817a8cdf9a358948ec49638f"
+                "reference": "75494f26b4ef089db9bf8c90b63c296246e099e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/558f614891341b1d817a8cdf9a358948ec49638f",
-                "reference": "558f614891341b1d817a8cdf9a358948ec49638f",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/75494f26b4ef089db9bf8c90b63c296246e099e8",
+                "reference": "75494f26b4ef089db9bf8c90b63c296246e099e8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "react/promise": "~2.0|~1.1"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Cache\\": "src\\"
+                    "React\\Cache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Async caching.",
+            "description": "Async, Promise-based cache interface for ReactPHP",
             "keywords": [
-                "cache"
+                "cache",
+                "caching",
+                "promise",
+                "reactphp"
             ],
-            "time": "2016-02-25T18:17:16+00:00"
+            "time": "2017-12-20T16:47:13+00:00"
         },
         {
             "name": "react/dns",
@@ -4755,16 +4762,16 @@
         },
         {
             "name": "react/promise-timer",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "3bc527fbd1201a193ab41c19b9a770d71a3514af"
+                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/3bc527fbd1201a193ab41c19b9a770d71a3514af",
-                "reference": "3bc527fbd1201a193ab41c19b9a770d71a3514af",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
+                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
                 "shasum": ""
             },
             "require": {
@@ -4773,7 +4780,7 @@
                 "react/promise": "~2.1|~1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.0 || ^4.8"
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -4794,7 +4801,7 @@
                     "email": "christian@lueck.tv"
                 }
             ],
-            "description": "Trivial timeout implementation for Promises",
+            "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
             "homepage": "https://github.com/react/promise-timer",
             "keywords": [
                 "async",
@@ -4804,20 +4811,20 @@
                 "timeout",
                 "timer"
             ],
-            "time": "2017-08-08T16:30:19+00:00"
+            "time": "2017-12-22T15:41:41+00:00"
         },
         {
             "name": "react/socket",
-            "version": "v0.8.6",
+            "version": "v0.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "2e8660111d14df908a913a058bce4a1786de489f"
+                "reference": "49bca29df739f4e288ba2abfed9cac93de1bfff6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/2e8660111d14df908a913a058bce4a1786de489f",
-                "reference": "2e8660111d14df908a913a058bce4a1786de489f",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/49bca29df739f4e288ba2abfed9cac93de1bfff6",
+                "reference": "49bca29df739f4e288ba2abfed9cac93de1bfff6",
                 "shasum": ""
             },
             "require": {
@@ -4851,20 +4858,20 @@
                 "reactphp",
                 "stream"
             ],
-            "time": "2017-11-18T16:47:56+00:00"
+            "time": "2017-12-24T11:28:59+00:00"
         },
         {
             "name": "react/stream",
-            "version": "v0.7.5",
+            "version": "v0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "a41bbffdda5e3f4282012f8e346cef48ecb28b24"
+                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/a41bbffdda5e3f4282012f8e346cef48ecb28b24",
-                "reference": "a41bbffdda5e3f4282012f8e346cef48ecb28b24",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
+                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
                 "shasum": ""
             },
             "require": {
@@ -4875,9 +4882,6 @@
             "require-dev": {
                 "clue/stream-filter": "~1.2",
                 "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "suggest": {
-                "react/event-loop": "^0.4"
             },
             "type": "library",
             "autoload": {
@@ -4900,7 +4904,7 @@
                 "stream",
                 "writable"
             ],
-            "time": "2017-11-20T11:55:48+00:00"
+            "time": "2017-12-21T14:12:01+00:00"
         },
         {
             "name": "sensiolabs/ansi-to-html",

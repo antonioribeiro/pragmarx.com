@@ -1,10 +1,10 @@
-@extends('templates.main')
+@extends('templates.old')
 
 @section('content')
     <div id="vue-google2fa">
         <h1><a href="https://github.com/antonioribeiro/google2fa">Google2FA Package</a></h1>
-        <p class="large">Playground</p>
-        <a href="/google2fa/middleware" class="btn btn-success" target="_blank">Test middleware</a>
+        <h1 class="text-right">Google2FA Playground</h1>
+        <a href="/playground/google2fa/middleware" class="btn btn-success" target="_blank">Test middleware</a>
         <br><br>
 
         <form>
